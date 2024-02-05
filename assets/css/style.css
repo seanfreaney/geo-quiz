@@ -16,4 +16,22 @@ body {
 
 /* Game area */
 
+.game-area {
+
+}
+
+/* Country Div */
+
+.country {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#start-button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    height: fit-content;
+}
+
 /* Score Area */
