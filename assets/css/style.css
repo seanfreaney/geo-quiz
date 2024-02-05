@@ -17,21 +17,35 @@ body {
 /* Game area */
 
 .game-area {
-
 }
 
 /* Country Div */
 
 .country {
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #start-button {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     height: fit-content;
+}
+
+/* Question Div */
+
+.question-area {
+}
+
+#question {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /* Score Area */
