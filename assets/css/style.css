@@ -31,7 +31,7 @@ body {
 
 #start-button {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
+    font-size: 0.9em;
     height: fit-content;
 }
 
@@ -46,6 +46,23 @@ body {
     display: flex;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+#box {
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100px;
+}
+
+/* Submit button */
+
+.submit {
+    text-align: center;
+}
+
+#submit-button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    height: fit-content;
 }
 
 /* Score Area */
