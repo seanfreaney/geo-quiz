@@ -17,6 +17,8 @@ body {
 /* Game area */
 
 .game-area {
+    height: 70vh;
+    display: grid;
 }
 
 /* Country Div */
@@ -66,3 +68,11 @@ body {
 }
 
 /* Score Area */
+
+.score-area {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+}
