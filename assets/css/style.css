@@ -14,6 +14,16 @@ body {
     text-align: center;
 }
 
+/* Main */
+
+/* Background Image (Love Running) */
+
+#hero {
+    height: 100vh;
+    width: 100%;
+    background: url("../images/0zaq_ag24_210203.jpg") no-repeat center center/cover;
+}
+
 /* Game area */
 
 .game-area {

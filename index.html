@@ -16,33 +16,40 @@
     <title>Geo Quiz</title>
 </head>
 <body>
-    <div class="heading">
-        <h1>Geo Quiz</h1>
-    </div>
-    <div class="game-area">
-        <div class="country">
-            <button id="start-button">Start</button>
-            <p>Country: <span id="country">X</span></p>
+    <!-- Header -->
+    <header>
+        <div class="heading">
+            <h1>Geo Quiz</h1>
         </div>
-        <div class="question-area">
-            <div id="question">
-                <p>Capital City</p><input id="box" type="text">
+    </header>
+
+    <!-- Main -->
+    <main id="hero">
+        <div class="game-area">
+            <div class="country">
+                <button id="start-button">Start</button>
+                <p>Country: <span id="country">X</span></p>
             </div>
-            <div id="question">
-                <p>Language</p><input id="box" type="text">
+            <div class="question-area">
+                <div id="question">
+                    <p>Capital City</p><input id="box" type="text">
+                </div>
+                <div id="question">
+                    <p>Language</p><input id="box" type="text">
+                </div>
+                <div id="question">
+                    <p>Population</p><input id="box" type="number">
+                </div>
             </div>
-            <div id="question">
-                <p>Population</p><input id="box" type="number">
+            <div class="submit">
+                <button id="submit-button">Submit Answer</button>
             </div>
         </div>
-        <div class="submit">
-            <button id="submit-button">Submit Answer</button>
+        <div class="score-area">
+            <p>Correct: <span id="correct">0</span></p>
+            <p>Incorrect: <span id="incorrect">0</span></p>
         </div>
-    </div>
-    <div class="score-area">
-        <p>Correct: <span id="correct">0</span></p>
-        <p>Incorrect: <span id="incorrect">0</span></p>
-    </div>
+    </main>
 
     
     <script src="assets/js/script.js"></script>
