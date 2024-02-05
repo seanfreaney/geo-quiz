@@ -6,7 +6,7 @@
 body {
     /* background-color: lightgrey;  */
     font-family: 'Open Sans', sans-serif;
-    /* margin: 0%; */
+    margin: 0%;
 }
 
 /* Heading */
@@ -23,7 +23,6 @@ body {
     height: 100vh;
     width: 100%;
     background: url("../images/0zaq_ag24_210203.jpg") no-repeat center center/cover;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }
 
 /* Game area */
@@ -36,12 +35,16 @@ body {
 
 /* Country Div */
 
-.country {
-    justify-content: space-between;
+.country-area {
+    /* justify-content: space-between;
     align-items: center;
-    display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
+    display: flex; */
+    /* margin-left: 10%; */
+    /* margin-right: 10%; */
+}
+
+#country {
+
 }
 
 #start-button {
@@ -53,14 +56,14 @@ body {
 /* Question Div */
 
 .question-area {
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #question {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 
 #box {
