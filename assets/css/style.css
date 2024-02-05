@@ -76,3 +76,11 @@ body {
     margin-left: 10%;
     margin-right: 10%;
 }
+
+#correct {
+    color: darkgreen;
+}
+
+#incorrect {
+    color: crimson;
+}
