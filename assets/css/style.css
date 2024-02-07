@@ -60,6 +60,7 @@ body {
     font-weight: bold;
     border-radius: 10px;
     border: 2px solid grey;
+    padding: 10px;
 }
 
 /* Question Div */
@@ -109,6 +110,7 @@ body {
     font-weight: bold;
     border-radius: 10px;
     border: 2px solid grey;
+    padding: 10px;
 }
 
 /* Score Area */
