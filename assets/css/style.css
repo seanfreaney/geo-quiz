@@ -147,7 +147,10 @@ main {
 
 /* Media query for devices >=480px */
 @media screen and (min-width: 480px) {
-
+    main {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 }
 
 /* Media query for devices >=768px */
