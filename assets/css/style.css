@@ -10,6 +10,11 @@ body {
     margin: 0%;
 }
 
+main {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 /* Heading */
 
 .heading {
@@ -66,8 +71,8 @@ body {
 /* Question Div */
 
 .question-area {
-    margin-left: 10%;
-    margin-right: 10%;
+    /* margin-left: 10%; */
+    /* margin-right: 10%; */
 }
 
 #question {
@@ -119,8 +124,8 @@ body {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
+    /* margin-left: 10%; */
+    /* margin-right: 10%; */
     padding-left: 5px;
     padding-right: 5px;
     background-color: rgba(255, 255, 255, 0.5);
