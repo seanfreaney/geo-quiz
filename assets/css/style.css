@@ -14,6 +14,9 @@ body {
 
 .heading {
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-weight: bold;
 }
 
 /* Main */
@@ -52,6 +55,11 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9em;
     height: fit-content;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid grey;
 }
 
 /* Question Div */
@@ -72,6 +80,7 @@ body {
     font-weight: bold;
     border-radius: 10px;
     margin-bottom: 10px;
+    border: 2px solid grey;
 }
 
 #box {
@@ -79,6 +88,7 @@ body {
     max-width: 100px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
+    border: 2px solid grey;
 }
 
 /* Submit button */
@@ -94,6 +104,11 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9em;
     height: fit-content;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid grey;
 }
 
 /* Score Area */
@@ -110,6 +125,7 @@ body {
     color: black;
     font-weight: bold;
     border-radius: 10px;
+    border: 2px solid grey;
 }
 
 #correct {
