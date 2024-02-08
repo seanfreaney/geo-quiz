@@ -212,5 +212,21 @@ function checkAnswerPopulation () {
 }
 
 function displayCountry () {
-    
+
 }
+
+// Start running game after DOM has loaded, add event listeners to buttons - (taken from Love Maths)
+
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
+            if (this.getAttribute("data-type") === "start") {
+                alert("You started the quiz!")
+            } else {
+                alert("You submitted your answers!")
+            }
+        });
+    } 
+});
