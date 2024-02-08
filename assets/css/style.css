@@ -68,6 +68,10 @@ main {
     padding: 10px;
 }
 
+#start-button:hover {
+    background-color: rgba(34, 139, 34, 1);
+}
+
 /* Question Div */
 
 .question-area {
@@ -116,6 +120,10 @@ main {
     border-radius: 10px;
     border: 2px solid grey;
     padding: 10px;
+}
+
+#submit-button:hover {
+    background-color: rgba(34, 139, 34, 1);
 }
 
 /* Score Area */
