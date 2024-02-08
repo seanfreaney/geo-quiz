@@ -1,3 +1,5 @@
+// Array of countries
+
 const countries = [
 {
     name: "Austria" ,
@@ -193,9 +195,33 @@ const countries = [
 }
 ];
 
+// Start running game after DOM has loaded, add event listeners to buttons - (taken from Love Maths)
+
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
+            if (this.getAttribute("data-type") === "start") {
+                alert("You started the quiz!");
+            } else {
+                alert("You submitted your answers!");
+            }
+        });
+    }
+});
+
 // sketch functions (Love Maths)
 
 function runGame () {
+    
+    // Generate random country from countries array
+    function generateCountry() {
+    // generate random index from within the range of the countries array
+    let randomIndex = Math.floor(Math.random() * countries.length);
+    // return the name of the country at the random index
+    return countries[randomIndex].name;
+    }
 
 }
 
@@ -215,18 +241,3 @@ function displayCountry () {
 
 }
 
-// Start running game after DOM has loaded, add event listeners to buttons - (taken from Love Maths)
-
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "start") {
-                alert("You started the quiz!")
-            } else {
-                alert("You submitted your answers!")
-            }
-        });
-    } 
-});
