@@ -1,194 +1,216 @@
 const countries = [
 {
-    country: "Austria" ,
+    name: "Austria" ,
     capital: "Vienna" ,
     language: ["German"],
     population: 8959000
 },
 {
-    country: "Belgium" ,
+    name: "Belgium" ,
     capital: "Brussels" ,
     language: ["German", "Dutch", "French"],
     population: 11686000
 },
 {   
-    country: "Switzerland",
+    name: "Switzerland",
     languages: ["German", "French", "Italian", "Romansh"],
     capital: "Bern",
     population: 8654622
 },
 {
-    country: "Bulgaria",
+    name: "Bulgaria",
     capital: "Sofia",
     language: ["Bulgarian"],
     population: 6688000
 },
 {
-    country: "Croatia",
+    name: "Croatia",
     capital: "Zagreb",
     language: ["Croatian"],
     population: 4008000
 },
 {
-    country: "Cyprus",
+    name: "Cyprus",
     capital: "Nicosia",
     language: ["Greek", "Turkish"],
     population: 1244000
 },
 {
-    country: "Czechia",
+    name: "Czechia",
     capital: "Prague",
     language: ["Czech"],
     population: 10495000
 },
 {
-    country: "Denmark",
+    name: "Denmark",
     capital: "Copenhagen",
     language: ["Danish"],
     population: 5911000
 },
 {
-    country: "Estonia",
+    name: "Estonia",
     capital: "Tallinn",
     language: ["Estonian"],
     population: 1323000
 },
 {
-    country: "Finland",
+    name: "Finland",
     capital: "Helsinki",
     language: ["Finnish"],
     population: 5545000
 },
 {
-    country: "France",
+    name: "France",
     capital: "Paris",
     language: ["French"],
     population: 64750000
 },
 {
-    country: "Germany",
+    name: "Germany",
     capital: "Berlin",
     language: ["German"],
     population: 83294000
 },
 {
-    country: "Greece",
+    name: "Greece",
     capital: "Athens",
     language: ["Greek"],
     population: 10341000
 },
 {
-    country: "Hungary",
+    name: "Hungary",
     capital: "Budapest",
     language: ["Hungarian"],
     population: 10156000
 },
 {
-    country: "Ireland",
+    name: "Ireland",
     capital: "Dublin",
     language: ["Irish", "English"],
     population: 5057000
 },
 {
-    country: "Italy”,
+    name: "Italy",
     capital: "Rome",
     language: ["Italian"],
     population: 58870000
 },
 {
-    country: "Latvia",
+    name: "Latvia",
     capital: "Riga",
     language: ["Latvian"],
     population: 1830000
 },
 {
-    country: "Lithuania",
+    name: "Lithuania",
     capital: "Vilnius",
     language: ["Lithuanian"],
     population: 2718000
 },
 {
-    country: "Luxembourg",
+    name: "Luxembourg",
     capital: "Luxembourg",
     language: ["Luxembourgish", "French", "German"],
     population: 654000
 },
 {
-    country: "Malta",
+    name: "Malta",
     capital: "Valletta",
     language: ["Maltese"],
     population: 535000 
 },
 {
-    country: "Netherlands",
+    name: "Netherlands",
     capital: "Amsterdam",
     language: ["Dutch"],
     population: 17618000
 },
 {
-    country: "Poland",
+    name: "Poland",
     capital: "Warsaw",
     language: ["Polish"],
     population: 41026000
 },
 {
-    country: "Portugal",
+    name: "Portugal",
     capital: "Lisbon",
     language: ["Portuguese"],
     population: 10247000
 },
 {
-    country: "Romania",
+    name: "Romania",
     capital: "Bucharest",
     language: ["Romanian"],
     population: 19890000
 },
 {
-    country: "Slovakia",
+    name: "Slovakia",
     capital: "Bratislava",
     language: ["Slovak"],
     population: 5795000
 },
 {
-    country: "Slovenia",
+    name: "Slovenia",
     capital: "Ljubljana",
     language: ["Slovenian"],
     population: 2120000
 },
 {
-    country: "Spain",
+    name: "Spain",
     capital: "Madrid",
     language: ["Spanish"],
     population: 47500000
 },
 {
-    country: "Sweden",
+    name: "Sweden",
     capital: "Stockholm",
     language: ["Swedish"],
     population: 10600000
 },
 {
-    country: "Russia",
+    name: "Russia",
     capital: "Moscow",
     language: ["Russian"],
     population: 145000000
 },
 {
-    country: "England",
+    name: "England",
     capital: "London",
     language: ["English"],
     population: 56000000
 },
 {
-    country: "Scotland",
+    name: "Scotland",
     capital: "Edinburgh",
     language: ["English", "Scots", "Scottish", "Scottish Gaelic"],
     population: 5454000
 },
 {
-    country: "Wales",
+    name: "Wales",
     capital: "Cardiff",
     language: ["Welsh", "English"],
     population: 3100000
 }
 ];
+
+// sketch functions (Love Maths)
+
+function runGame () {
+
+}
+
+function checkAnswerCity () {
+
+}
+
+function checkAnswerLanguage () {
+
+}
+
+function checkAnswerPopulation () {
+
+}
+
+function displayCountry () {
+    
+}
