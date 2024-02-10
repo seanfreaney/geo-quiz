@@ -218,9 +218,14 @@ document.addEventListener("DOMContentLoaded", function () {
 // sketch functions (Love Maths)
 
 function runGame (game) {
-
+    
+    // generate random country from countries array
     let randomIndex = Math.floor(Math.random() * countries.length);
     let randomCountry = countries[randomIndex].name;
+
+    if (game === "start") {
+        displayCountry(randomCountry);
+    }
 
 }
 
@@ -236,7 +241,7 @@ function checkAnswerPopulation () {
 
 }
 
-function displayCountry () {
+function displayCountry (randomCountry) {
 
     document.getElementById("country").textContent = randomCountry;
 
