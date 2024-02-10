@@ -202,26 +202,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "start") {
-                alert("You started the quiz!");
-            } else {
+            if (this.getAttribute("data-type") === "submit") {
                 alert("You submitted your answers!");
+            } else {
+                let game = this.getAttribute("data-type");
+                runGame(game);
             }
         });
     }
+
+    runGame(game);
+
 });
 
 // sketch functions (Love Maths)
 
-function runGame () {
-    
-    // Generate random country from countries array
-    function generateCountry() {
-    // generate random index from within the range of the countries array
+function runGame (game) {
+
     let randomIndex = Math.floor(Math.random() * countries.length);
-    // return the name of the country at the random index
-    return countries[randomIndex].name;
-    }
+    let randomCountry = countries[randomIndex].name;
 
 }
 
@@ -238,6 +237,8 @@ function checkAnswerPopulation () {
 }
 
 function displayCountry () {
+
+    document.getElementById("country").textContent = randomCountry;
 
 }
 
