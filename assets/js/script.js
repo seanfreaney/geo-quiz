@@ -195,6 +195,9 @@ const countries = [
 }
 ];
 
+// Declare at higher scope so can be accessed by all functions
+let randomCountry;
+
 // Start running game after DOM has loaded, add event listeners to buttons - (taken from Love Maths)
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -203,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
-                alert("You submitted your answers!");
+                checkAnswer();
             } else {
                 let game = this.getAttribute("data-type");
                 runGame(game);
@@ -221,7 +224,7 @@ function runGame (game) {
     
     // generate random country from countries array
     let randomIndex = Math.floor(Math.random() * countries.length);
-    let randomCountry = countries[randomIndex].name;
+    randomCountry = countries[randomIndex].name;
 
     if (game === "start") {
         displayCountry(randomCountry);
@@ -235,6 +238,20 @@ function correctAnswer () {
     let country = countries.find(country => country.name === randomCountry);
 
     return country.capital;
+
+}
+
+function checkAnswer () {
+
+    // Check answer method taken from Love Maths
+    let userAnswer = document.getElementById("box1").value.trim();
+    let correctCapital = correctAnswer();
+    
+    if (userAnswer.toLowerCase() === correctCapital.toLowerCase()) {
+        alert("Correct")
+    } else {
+        alert("incorrect. the correct answer was" + correctCapital);
+    }
 
 }
 
