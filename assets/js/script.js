@@ -229,18 +229,12 @@ function runGame (game) {
 
 }
 
-function correctAnswer (randomCountry) {
+function correctAnswer () {
 
-    // Find the country object from the countries array - W3 schools find() method
+    // Find country object from the countries array (W3 Schools find method)
     let country = countries.find(country => country.name === randomCountry);
-    // take the 'capital' value for the newly defined 'country' variable
-    let capital = country.capital;
 
-    return capital;
-
-}
-
-function checkAnswerCity () {
+    return country.capital;
 
 }
 
@@ -257,4 +251,3 @@ function displayCountry (randomCountry) {
     document.getElementById("country").textContent = randomCountry;
 
 }
-
