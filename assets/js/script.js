@@ -229,6 +229,17 @@ function runGame (game) {
 
 }
 
+function correctAnswer (randomCountry) {
+
+    // Find the country object from the countries array - W3 schools find() method
+    let country = countries.find(country => country.name === randomCountry);
+    // take the 'capital' value for the newly defined 'country' variable
+    let capital = country.capital;
+
+    return capital;
+
+}
+
 function checkAnswerCity () {
 
 }
