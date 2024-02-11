@@ -237,26 +237,40 @@ function correctAnswer () {
     // Find country object from the countries array (W3 Schools find method)
     let country = countries.find(country => country.name === randomCountry);
 
-    return country.capital;
+    // Find capital of the country object
+    let correctCity = country.capital;
+
+    // Find Languages of country object
+    let correctLanguages = country.language; 
+
+    return [correctCity, correctLanguages];
 
 }
 
 function checkAnswer () {
 
     // Check answer method taken from Love Maths
-    let userAnswer = document.getElementById("box1").value.trim();
-    let correctCapital = correctAnswer();
-    
-    if (userAnswer.toLowerCase() === correctCapital.toLowerCase()) {
-        alert("Correct")
+    // Take values from input elements and trim whitespace
+    let userAnswerCity = document.getElementById("box1").value.trim();
+    let userAnswerLanguage = document.getElementById("box2").value.trim();
+
+    // Call correctAnswer to get correct capital and languages
+    let [correctCapital, correctLanguages] = correctAnswer(); // Array destructuring MDN web docs
+
+    // Check capital city answer
+    if (userAnswerCity.toLowerCase() === correctCapital.toLowerCase()) {
+        alert("Correct city")
     } else {
-        alert("incorrect. the correct answer was" + correctCapital);
+        alert("Incorrect. The correct city was " + correctCapital);
     }
 
-}
-
-function checkAnswerLanguage () {
-
+    // Check language answer - allow for  (W3 Schools find method)
+    let languageMatch = correctLanguages.find(language => language.toLowerCase() === userAnswerLanguage.toLowerCase());
+    if (languageMatch) {
+        alert("Correct language!");
+    } else {
+        alert("Incorrect language. The correct language(s) is/are: " + correctLanguages.join(", "));
+    }
 }
 
 function checkAnswerPopulation () {
