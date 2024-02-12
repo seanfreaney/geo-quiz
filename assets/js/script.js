@@ -237,10 +237,25 @@ function correctAnswer () {
     // Find capital of the country object
     let correctCity = country.capital;
 
-    // Find Languages of country object
+    // Find languages of country object
     let correctLanguages = country.language; 
 
-    return [correctCity, correctLanguages];
+    // Find population of the country object
+    let population = country.population;
+
+    // Round population based on different thresholds
+    let roundedPopulation;
+    if (population < 2000000) {
+        roundedPopulation = Math.round(population / 100000) * 100000;
+    } else if (population < 8000000) {
+        roundedPopulation = Math.round(population / 250000) * 250000;
+    } else if (population < 20000000) {
+        roundedPopulation = Math.round(population / 500000) * 500000;
+    } else {
+        roundedPopulation = Math.round(population / 1000000) * 1000000;
+    }
+
+    return [correctCity, correctLanguages, roundedPopulation];
 
 }
 
