@@ -246,13 +246,13 @@ function correctAnswer () {
     // Round population based on different thresholds
     let roundedPopulation;
     if (population < 2000000) {
-        roundedPopulation = Math.round(population / 100000) * 100000;
+        roundedPopulation = Math.round(population / 100000) * 100;
     } else if (population < 8000000) {
-        roundedPopulation = Math.round(population / 250000) * 250000;
+        roundedPopulation = Math.round(population / 250000) * 250;
     } else if (population < 20000000) {
-        roundedPopulation = Math.round(population / 500000) * 500000;
+        roundedPopulation = Math.round(population / 500000) * 500;
     } else {
-        roundedPopulation = Math.round(population / 1000000) * 1000000;
+        roundedPopulation = Math.round(population / 1000000) * 1000;
     }
 
     return [correctCity, correctLanguages, roundedPopulation];
@@ -290,7 +290,10 @@ function checkAnswerPopulation () {
 }
 
 function displayCountry (randomCountry) {
+    // Get rounded population from correctAnswer array
+    let roundedPopulation = correctAnswer()[2];
 
     document.getElementById("country").textContent = randomCountry;
+    document.getElementById("radio-pop").textContent = + roundedPopulation.toString();
 
 }
