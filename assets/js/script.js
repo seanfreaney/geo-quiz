@@ -283,8 +283,14 @@ function checkAnswerPopulation () {
 function displayCountry (randomCountry) {
     // Get rounded population from correctAnswer array
     let roundedPopulation = correctAnswer()[2];
+    // Add and Subtract 10% from population for multiple choice option
+    let roundedPopulationMinus = (roundedPopulation * 0.9).toFixed(2); // toFixed() logic from BaseDash
+    let roundedPopulationPlus = (roundedPopulation * 1.1).toFixed(2); // toFixed() logic from BaseDash
 
+    // Display randomCountry name and population options
     document.getElementById("country").textContent = randomCountry;
     document.getElementById("radio-pop").textContent = + roundedPopulation.toString();
+    document.getElementById("radio-pop1").textContent = + roundedPopulationMinus.toString();
+    document.getElementById("radio-pop2").textContent = + roundedPopulationPlus.toString();
 
 }
