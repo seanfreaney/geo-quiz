@@ -243,18 +243,9 @@ function correctAnswer () {
     // Find population of the country object
     let population = country.population;
 
-    // Round population based on different thresholds
-    let roundedPopulation;
-    if (population < 2000000) {
-        roundedPopulation = Math.round(population / 100000) * 100;
-    } else if (population < 8000000) {
-        roundedPopulation = Math.round(population / 250000) * 250;
-    } else if (population < 20000000) {
-        roundedPopulation = Math.round(population / 500000) * 500;
-    } else {
-        roundedPopulation = Math.round(population / 1000000) * 1000;
-    }
-
+    // Round population to nearest ten thousand and display as decimal
+    let roundedPopulation = Math.round(population / 10000) / 100;
+    
     return [correctCity, correctLanguages, roundedPopulation];
 
 }
