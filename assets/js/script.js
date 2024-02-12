@@ -213,9 +213,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
-    runGame(game);
-
 });
 
 // sketch functions (Love Maths)
