@@ -207,7 +207,6 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
-                checkAnswerPopulation();
             } else {
                 let game = this.getAttribute("data-type");
                 runGame(game);
@@ -273,24 +272,27 @@ function checkAnswer () {
     if (languageMatch) {
         alert("Correct language!");
     } else {
-        alert("Incorrect language. The correct language(s) is/are: " + correctLanguages.join(", "));
+        alert("Incorrect language. The correct language(s) is/are: " + correctLanguages.join(", ")); // note here
     }
 }
 
-
+function checkAnswerPopulation() {
 
     // Youtube #SmartCode Javascript tutorials
+    // Select all buttons with 'population class'
     let allButtons = document.querySelectorAll(".population");
 
-    let chosenButton = 0;
-    // register click event
+    // Create variable to store the value of chosen button
+    let chosenButton = 0;  
+    // register click event for each button
     allButtons.forEach(bt =>{
         bt.addEventListener('click', (e) =>{
+            // When a button is clicked, set chosenButton to its text content
             chosenButton =e.target.innerHTML;
             console.log(chosenButton);
         })
     });
-
+}
 
 
 function displayCountry (randomCountry) {
