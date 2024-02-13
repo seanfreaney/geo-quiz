@@ -289,8 +289,7 @@ function displayCountry (randomCountry) {
 
     // Display randomCountry name and population options
     document.getElementById("country").textContent = randomCountry;
-    document.getElementById("radio-pop").textContent = + roundedPopulation.toString();
-    document.getElementById("radio-pop1").textContent = + roundedPopulationMinus.toString();
-    document.getElementById("radio-pop2").textContent = + roundedPopulationPlus.toString();
-
+    document.getElementById("radio-pop").textContent = roundedPopulation.toString();
+    document.getElementById("radio-pop1").textContent = roundedPopulationMinus.toString();
+    document.getElementById("radio-pop2").textContent = roundedPopulationPlus.toString();
 }
