@@ -13,6 +13,8 @@ body {
 main {
     margin-left: 10%;
     margin-right: 10%;
+    justify-content: center;
+    display: grid;
 }
 
 /* Heading */
@@ -42,35 +44,10 @@ main {
     align-items: center;
 }
 
-/* Start Area */
-
-.start-area {
-    /* justify-content: space-between;
-    align-items: center;
-    display: flex; */
-    /* margin-left: 10%; */
-    /* margin-right: 10%; */
-}
-
 #country {
 
 }
 
-#start-button {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9em;
-    height: fit-content;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 2px solid grey;
-    padding: 10px;
-}
-
-#start-button:hover {
-    background-color: rgba(34, 139, 34, 1);
-}
 
 /* Question Div */
 
@@ -96,9 +73,10 @@ main {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     border: 2px solid grey;
+    margin-left: 2px;
 }
 
-/* Submit button */
+/* Buttons */
 
 .submit {
     text-align: center;
@@ -106,6 +84,35 @@ main {
     display: grid;
     justify-content: center;
     margin-bottom: 10px;
+}
+
+.population {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.6em;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    margin-left: 2px;
+}
+
+.population:hover {
+    background-color: rgba(34, 139, 34, 1);
+}
+
+#start-button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid grey;
+    padding: 10px;
+}
+
+#start-button:hover {
+    background-color: rgba(34, 139, 34, 1);
 }
 
 #submit-button {
