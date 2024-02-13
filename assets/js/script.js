@@ -287,9 +287,22 @@ function displayCountry (randomCountry) {
     let roundedPopulationMinus = (roundedPopulation * 0.9).toFixed(2); // toFixed() logic from BaseDash
     let roundedPopulationPlus = (roundedPopulation * 1.1).toFixed(2); // toFixed() logic from BaseDash
 
+    // Randomly shuffle the values
+    let populations = [roundedPopulation, roundedPopulationMinus, roundedPopulationPlus];
+    populations = shuffle(populations);
+
     // Display randomCountry name and population options
     document.getElementById("country").textContent = randomCountry;
-    document.getElementById("radio-pop").textContent = roundedPopulation.toString();
-    document.getElementById("radio-pop1").textContent = roundedPopulationMinus.toString();
-    document.getElementById("radio-pop2").textContent = roundedPopulationPlus.toString();
+    document.getElementById("radio-pop").textContent = populations[0].toString();
+    document.getElementById("radio-pop1").textContent = populations[1].toString();
+    document.getElementById("radio-pop2").textContent = populations[2].toString();
+}
+
+// Function to shuffle array elements - Fisher-Yates sorting Algorithim (freeCodeCamp)
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
