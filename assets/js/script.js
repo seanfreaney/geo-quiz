@@ -207,6 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
+                checkAnswerPopulation();
             } else {
                 let game = this.getAttribute("data-type");
                 runGame(game);
@@ -276,9 +277,21 @@ function checkAnswer () {
     }
 }
 
-function checkAnswerPopulation () {
 
-}
+
+    // Youtube #SmartCode Javascript tutorials
+    let allButtons = document.querySelectorAll(".population");
+
+    let chosenButton = 0;
+    // register click event
+    allButtons.forEach(bt =>{
+        bt.addEventListener('click', (e) =>{
+            chosenButton =e.target.innerHTML;
+            console.log(chosenButton);
+        })
+    });
+
+
 
 function displayCountry (randomCountry) {
     // Get rounded population from correctAnswer array
