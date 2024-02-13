@@ -14,8 +14,8 @@ const countries = [
     population: 11686000
 },
 {   
-    name: "Switzerland",
-    languages: ["German", "French", "Italian", "Romansh"],
+    name: "Switzerland", 
+    language: ["German", "French", "Italian", "Romansh"],
     capital: "Bern",
     population: 8654622
 },
