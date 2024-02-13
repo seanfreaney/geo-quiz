@@ -73,7 +73,7 @@ main {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     border: 2px solid grey;
-    margin-left: 2px;
+    margin-left: 4px;
 }
 
 /* Buttons */
@@ -95,7 +95,7 @@ main {
     margin-left: 2px;
 }
 
-.population:hover {
+.population:active {
     background-color: rgba(34, 139, 34, 1);
 }
 
