@@ -287,12 +287,12 @@ function checkAnswerPopulation() {
     let allButtons = document.querySelectorAll(".population");
 
     // Create variable to store the value of chosen button
-    // let chosenButton = 0;  
     // register click event for each button
     allButtons.forEach(bt =>{
         bt.addEventListener('click', (e) =>{
             // When a button is clicked, check value is equal to roundedPopulation
             let chosenButton = parseFloat(e.target.innerHTML); // Parse ChosenButton value to float for comparison (Flexiple.com)
+            console.log("Chosen Button value:", chosenButton); // this function only works when I log this value to the console
             if (chosenButton === roundedPopulation) {
                 alert("Correct Population!")
             } else {
