@@ -226,6 +226,7 @@ function runGame (game) {
 
     if (game === "start") {
         displayCountry(randomCountry);
+        correctAnswer(); // Call correctAnswer after setting randomCountry
     }
 
 }
