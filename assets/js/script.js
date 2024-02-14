@@ -207,6 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
+                checkAnswerPopulation();
             } else {
                 let game = this.getAttribute("data-type");
                 runGame(game);
@@ -277,20 +278,26 @@ function checkAnswer () {
 }
 
 function checkAnswerPopulation() {
+    // Get rounded population from the correctAnswer function
+    let roundedPopulation = correctAnswer()[2];
 
     // Youtube #SmartCode Javascript tutorials
     // Select all buttons with 'population class'
     let allButtons = document.querySelectorAll(".population");
 
     // Create variable to store the value of chosen button
-    let chosenButton = 0;  
+    // let chosenButton = 0;  
     // register click event for each button
     allButtons.forEach(bt =>{
         bt.addEventListener('click', (e) =>{
-            // When a button is clicked, set chosenButton to its text content
-            chosenButton =e.target.innerHTML;
-            console.log(chosenButton);
-        })
+            // When a button is clicked, check value is equal to roundedPopulation
+            let chosenButton = parseFloat(e.target.innerHTML); // Parse ChosenButton value to float for comparison (Flexiple.com)
+            if (chosenButton === roundedPopulation) {
+                alert("Correct Population!")
+            } else {
+                alert("Incorrect population. The correct population is " + roundedPopulation);
+            }
+        });
     });
 }
 
