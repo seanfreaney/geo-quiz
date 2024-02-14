@@ -235,7 +235,7 @@ function correctAnswer () {
     let country = countries.find(country => country.name === randomCountry);
 
     // Find capital of the country object
-    let correctCity = country.capital;
+    let correctCapital = country.capital;
 
     // Find languages of country object
     let correctLanguages = country.language; 
@@ -246,7 +246,7 @@ function correctAnswer () {
     // Round population to nearest ten thousand and display as decimal
     let roundedPopulation = Math.round(population / 10000) / 100;
     
-    return [correctCity, correctLanguages, roundedPopulation];
+    return [correctCapital, correctLanguages];
 
 }
 
