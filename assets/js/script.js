@@ -246,7 +246,7 @@ function correctAnswer () {
     // Round population to nearest ten thousand and display as decimal
     let roundedPopulation = Math.round(population / 10000) / 100;
     
-    return [correctCapital, correctLanguages];
+    return [correctCapital, correctLanguages, roundedPopulation];
 
 }
 
