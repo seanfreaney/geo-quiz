@@ -5,193 +5,193 @@ const countries = [
     name: "Austria" ,
     capital: "Vienna" ,
     language: ["German"],
-    population: 8959000
+    population: 8.96
 },
 {
     name: "Belgium" ,
     capital: "Brussels" ,
     language: ["German", "Dutch", "French"],
-    population: 11686000
+    population: 11.69
 },
 {   
     name: "Switzerland", 
     language: ["German", "French", "Italian", "Romansh"],
     capital: "Bern",
-    population: 8654622
+    population: 8.65
 },
 {
     name: "Bulgaria",
     capital: "Sofia",
     language: ["Bulgarian"],
-    population: 6688000
+    population: 6.69
 },
 {
     name: "Croatia",
     capital: "Zagreb",
     language: ["Croatian"],
-    population: 4008000
+    population: 4.01
 },
 {
     name: "Cyprus",
     capital: "Nicosia",
     language: ["Greek", "Turkish"],
-    population: 1244000
+    population: 1.24
 },
 {
     name: "Czechia",
     capital: "Prague",
     language: ["Czech"],
-    population: 10495000
+    population: 10.50
 },
 {
     name: "Denmark",
     capital: "Copenhagen",
     language: ["Danish"],
-    population: 5911000
+    population: 5.91
 },
 {
     name: "Estonia",
     capital: "Tallinn",
     language: ["Estonian"],
-    population: 1323000
+    population: 1.32
 },
 {
     name: "Finland",
     capital: "Helsinki",
     language: ["Finnish"],
-    population: 5545000
+    population: 5.55
 },
 {
     name: "France",
     capital: "Paris",
     language: ["French"],
-    population: 64750000
+    population: 64.75
 },
 {
     name: "Germany",
     capital: "Berlin",
     language: ["German"],
-    population: 83294000
+    population: 83.30
 },
 {
     name: "Greece",
     capital: "Athens",
     language: ["Greek"],
-    population: 10341000
+    population: 10.34
 },
 {
     name: "Hungary",
     capital: "Budapest",
     language: ["Hungarian"],
-    population: 10156000
+    population: 10.16
 },
 {
     name: "Ireland",
     capital: "Dublin",
     language: ["Irish", "English"],
-    population: 5057000
+    population: 5.06
 },
 {
     name: "Italy",
     capital: "Rome",
     language: ["Italian"],
-    population: 58870000
+    population: 58.87
 },
 {
     name: "Latvia",
     capital: "Riga",
     language: ["Latvian"],
-    population: 1830000
+    population: 1.83
 },
 {
     name: "Lithuania",
     capital: "Vilnius",
     language: ["Lithuanian"],
-    population: 2718000
+    population: 2.72
 },
 {
     name: "Luxembourg",
     capital: "Luxembourg",
     language: ["Luxembourgish", "French", "German"],
-    population: 654000
+    population: 0.654
 },
 {
     name: "Malta",
     capital: "Valletta",
     language: ["Maltese"],
-    population: 535000 
+    population: 0.535
 },
 {
     name: "Netherlands",
     capital: "Amsterdam",
     language: ["Dutch"],
-    population: 17618000
+    population: 17.62
 },
 {
     name: "Poland",
     capital: "Warsaw",
     language: ["Polish"],
-    population: 41026000
+    population: 37.75
 },
 {
     name: "Portugal",
     capital: "Lisbon",
     language: ["Portuguese"],
-    population: 10247000
+    population: 10.25
 },
 {
     name: "Romania",
     capital: "Bucharest",
     language: ["Romanian"],
-    population: 19890000
+    population: 19.90
 },
 {
     name: "Slovakia",
     capital: "Bratislava",
     language: ["Slovak"],
-    population: 5795000
+    population: 5.47
 },
 {
     name: "Slovenia",
     capital: "Ljubljana",
     language: ["Slovenian"],
-    population: 2120000
+    population: 2.12
 },
 {
     name: "Spain",
     capital: "Madrid",
     language: ["Spanish"],
-    population: 47500000
+    population: 47.5
 },
 {
     name: "Sweden",
     capital: "Stockholm",
     language: ["Swedish"],
-    population: 10600000
+    population: 10.6
 },
 {
     name: "Russia",
     capital: "Moscow",
     language: ["Russian"],
-    population: 145000000
+    population: 145.000000
 },
 {
     name: "England",
     capital: "London",
     language: ["English"],
-    population: 56000000
+    population: 56.000000
 },
 {
     name: "Scotland",
     capital: "Edinburgh",
     language: ["English", "Scots", "Scottish", "Scottish Gaelic"],
-    population: 5454000
+    population: 5.45
 },
 {
     name: "Wales",
     capital: "Cardiff",
     language: ["Welsh", "English"],
-    population: 3100000
+    population: 3.100000
 }
 ];
 
@@ -225,9 +225,8 @@ function runGame (game) {
     randomCountry = countries[randomIndex].name;
 
     if (game === "start") {
-        let [correctCapital, correctLanguages, roundedPopulation] = correctAnswer (); // Destructure the correctAnswer return array MDN web docs
-        displayCountry(randomCountry, roundedPopulation); // Pass roundedPopulation to displayCountry
-        checkAnswerPopulation(roundedPopulation); // Pass roundedPopulation to checkAnswerPopulation
+        displayCountry(randomCountry);
+        correctAnswer(); // Call correctAnswer after setting randomCountry
     }
 
 }
@@ -285,7 +284,6 @@ function checkAnswerPopulation(roundedPopulation) {
     // Select all buttons with 'population class'
     let allButtons = document.querySelectorAll(".population");
 
-    // Create variable to store the value of chosen button
     // register click event for each button
     allButtons.forEach(bt =>{
         bt.addEventListener('click', (e) =>{
@@ -303,9 +301,9 @@ function checkAnswerPopulation(roundedPopulation) {
 }
 
 
-function displayCountry (randomCountry, roundedPopulation) {
+function displayCountry (randomCountry) {
     // Get rounded population from correctAnswer array
-    // let roundedPopulation = correctAnswer()[2];
+    let roundedPopulation = correctAnswer()[2];
     // Add and Subtract 10% from population for multiple choice option
     let roundedPopulationMinus = (roundedPopulation * 0.9).toFixed(2); // toFixed() logic from BaseDash
     let roundedPopulationPlus = (roundedPopulation * 1.1).toFixed(2); // toFixed() logic from BaseDash
