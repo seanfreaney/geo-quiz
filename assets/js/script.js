@@ -208,7 +208,6 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
-                // checkAnswerPopulation();
             } else {
                 let game = this.getAttribute("data-type");
                 runGame(game);
@@ -245,9 +244,6 @@ function correctAnswer () {
 
     // Find population of the country object
     let population = country.population;
-
-    // Round population to nearest ten thousand and display as decimal
-    // let roundedPopulation = Math.round(population / 10000) / 100;
     
     return [correctCapital, correctLanguages, population];
 
@@ -295,26 +291,6 @@ function checkAnswer () {
     }
 
 }
-
-// function checkAnswerPopulation() {
-
-    // get selected radio button value
-    // let chosenButton = document.querySelector('input[name="population"]:checked');
-
-    // Get the chosen population value from the selected radio button's span using nextSiblingElement - geeksforgeeks.org & dcode tutorial
-    // let chosenPopulation = parseFloat(chosenButton.nextElementSibling.textContent); // parseFloat flexiple.com
-
-    // Call correctAnswer to get the correct population
-    // let correctPopulation = correctAnswer()[2];
-
-    // Check if the chosen population matches the correct population
-    // if (chosenPopulation === correctPopulation) {
-        alert("Correct Population!");
-    // } else {
-        // alert("Incorrect population. The correct population is " + correctPopulation);
-    // }
-// }
-
 
 function displayCountry (randomCountry) {
     // Get population from correctAnswer array
