@@ -278,7 +278,7 @@ function checkAnswer () {
     }
 }
 
-// function checkAnswerPopulation(population) {
+function checkAnswerPopulation(population) {
 
     // Youtube #SmartCode Javascript tutorials
     // Select all buttons with 'population class'
@@ -298,7 +298,7 @@ function checkAnswer () {
             }
         });
     });
-// }
+}
 
 
 function displayCountry (randomCountry) {
