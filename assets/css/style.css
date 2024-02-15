@@ -87,10 +87,14 @@ main {
 }
 
 .population {
+    display: none;
+}
+
+.population + span {
     font-family: 'Open Sans', sans-serif;
-    font-size: 0.6em;
+    font-size: 0.75em;
     height: fit-content;
-    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: rgba(255, 255, 255, 0.5); */
     color: black;
     margin-left: 2px;
 }
