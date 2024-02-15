@@ -225,8 +225,9 @@ function runGame (game) {
     randomCountry = countries[randomIndex].name;
 
     if (game === "start") {
-        displayCountry(randomCountry);
-        correctAnswer(); // Call correctAnswer after setting randomCountry
+        let [correctCapital, correctLanguages, roundedPopulation] = correctAnswer (); // Destructure the correctAnswer return array MDN web docs
+        displayCountry(randomCountry, roundedPopulation); // Pass roundedPopulation to displayCountry
+        checkAnswerPopulation(roundedPopulation); // Pass roundedPopulation to checkAnswerPopulation
     }
 
 }
@@ -278,9 +279,7 @@ function checkAnswer () {
     }
 }
 
-function checkAnswerPopulation() {
-    // Get rounded population from the correctAnswer function
-    let roundedPopulation = correctAnswer()[2];
+function checkAnswerPopulation(roundedPopulation) {
 
     // Youtube #SmartCode Javascript tutorials
     // Select all buttons with 'population class'
@@ -293,6 +292,7 @@ function checkAnswerPopulation() {
             // When a button is clicked, check value is equal to roundedPopulation
             let chosenButton = parseFloat(e.target.innerHTML); // Parse ChosenButton value to float for comparison (Flexiple.com)
             console.log("Chosen Button value:", chosenButton); // this function only works when I log this value to the console
+            console.log(roundedPopulation); // log rounded value to console to compare values in attempt to debug
             if (chosenButton === roundedPopulation) {
                 alert("Correct Population!")
             } else {
@@ -303,9 +303,9 @@ function checkAnswerPopulation() {
 }
 
 
-function displayCountry (randomCountry) {
+function displayCountry (randomCountry, roundedPopulation) {
     // Get rounded population from correctAnswer array
-    let roundedPopulation = correctAnswer()[2];
+    // let roundedPopulation = correctAnswer()[2];
     // Add and Subtract 10% from population for multiple choice option
     let roundedPopulationMinus = (roundedPopulation * 0.9).toFixed(2); // toFixed() logic from BaseDash
     let roundedPopulationPlus = (roundedPopulation * 1.1).toFixed(2); // toFixed() logic from BaseDash
