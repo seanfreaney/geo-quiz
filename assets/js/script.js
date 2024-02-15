@@ -246,9 +246,9 @@ function correctAnswer () {
     let population = country.population;
 
     // Round population to nearest ten thousand and display as decimal
-    let roundedPopulation = Math.round(population / 10000) / 100;
+    // let roundedPopulation = Math.round(population / 10000) / 100;
     
-    return [correctCapital, correctLanguages, roundedPopulation];
+    return [correctCapital, correctLanguages, population];
 
 }
 
@@ -278,7 +278,7 @@ function checkAnswer () {
     }
 }
 
-function checkAnswerPopulation(roundedPopulation) {
+// function checkAnswerPopulation(population) {
 
     // Youtube #SmartCode Javascript tutorials
     // Select all buttons with 'population class'
@@ -287,29 +287,29 @@ function checkAnswerPopulation(roundedPopulation) {
     // register click event for each button
     allButtons.forEach(bt =>{
         bt.addEventListener('click', (e) =>{
-            // When a button is clicked, check value is equal to roundedPopulation
+            // When a button is clicked, check value is equal to population
             let chosenButton = parseFloat(e.target.innerHTML); // Parse ChosenButton value to float for comparison (Flexiple.com)
             console.log("Chosen Button value:", chosenButton); // this function only works when I log this value to the console
-            console.log(roundedPopulation); // log rounded value to console to compare values in attempt to debug
-            if (chosenButton === roundedPopulation) {
+            console.log(population); // log value to console to compare values in attempt to debug
+            if (chosenButton === population) {
                 alert("Correct Population!")
             } else {
-                alert("Incorrect population. The correct population is " + roundedPopulation);
+                alert("Incorrect population. The correct population is " + population);
             }
         });
     });
-}
+// }
 
 
 function displayCountry (randomCountry) {
-    // Get rounded population from correctAnswer array
-    let roundedPopulation = correctAnswer()[2];
+    // Get population from correctAnswer array
+    let population = correctAnswer()[2];
     // Add and Subtract 10% from population for multiple choice option
-    let roundedPopulationMinus = (roundedPopulation * 0.9).toFixed(2); // toFixed() logic from BaseDash
-    let roundedPopulationPlus = (roundedPopulation * 1.1).toFixed(2); // toFixed() logic from BaseDash
+    let populationMinus = (population * 0.9).toFixed(2); // toFixed() logic from BaseDash
+    let populationPlus = (population * 1.1).toFixed(2); // toFixed() logic from BaseDash
 
     // Randomly shuffle the values
-    let populations = [roundedPopulation, roundedPopulationMinus, roundedPopulationPlus];
+    let populations = [population, populationMinus, populationPlus];
     populations = shuffle(populations);
 
     // Display randomCountry name and population options
