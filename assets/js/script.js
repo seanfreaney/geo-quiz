@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
-                checkAnswerPopulation();
+                // checkAnswerPopulation();
             } else {
                 let game = this.getAttribute("data-type");
                 runGame(game);
@@ -240,7 +240,7 @@ function correctAnswer () {
     // Find capital of the country object
     let correctCapital = country.capital;
 
-    // Find languages of country object
+    // Find languages of country object, as some objects have multiple languages this is presented as an array
     let correctLanguages = country.language; 
 
     // Find population of the country object
@@ -270,16 +270,13 @@ function checkAnswer () {
         alert("Incorrect. The correct city was " + correctCapital);
     }
 
-    // Check language answer - allow for  (W3 Schools find method)
+    // Check language answer - allow for  (W3 Schools find method) & Bro Code javascript arrow functions tutorial
     let languageMatch = correctLanguages.find(language => language.toLowerCase() === userAnswerLanguage.toLowerCase());
     if (languageMatch) {
         alert("Correct language!");
     } else {
-        alert("Incorrect language. The correct language(s) is/are: " + correctLanguages.join(", ")); // note here
+        alert("Incorrect language. The correct language(s) is/are: " + correctLanguages.join(", ")); // join() from educba
     }
-}
-
-function checkAnswerPopulation(population) {
 
     // get selected radio button value
     let chosenButton = document.querySelector('input[name="population"]:checked');
@@ -297,23 +294,26 @@ function checkAnswerPopulation(population) {
         alert("Incorrect population. The correct population is " + correctPopulation);
     }
 
-    // Youtube #SmartCode Javascript tutorials - querySelector
-    // Select button with 'population class'
-    // let button = document.querySelector(".population");
-
-    // register click event for the button
-    // button.addEventListener('click', function () {
-        // When the button is clicked, check if its inner HTML is equal to the population
-        // let chosenPopulation = parseFloat(this.innerHTML); // Parse inner HTML value to float for comparison
-        // console.log(chosenPopulation);
-        // if (chosenPopulation === population)  {
-        // alert("Correct Population!")
-        // } else {
-        // alert("Incorrect population. The correct population is " + population);
-        // }
-    // }); 
-    
 }
+
+// function checkAnswerPopulation() {
+
+    // get selected radio button value
+    // let chosenButton = document.querySelector('input[name="population"]:checked');
+
+    // Get the chosen population value from the selected radio button's span using nextSiblingElement - geeksforgeeks.org & dcode tutorial
+    // let chosenPopulation = parseFloat(chosenButton.nextElementSibling.textContent); // parseFloat flexiple.com
+
+    // Call correctAnswer to get the correct population
+    // let correctPopulation = correctAnswer()[2];
+
+    // Check if the chosen population matches the correct population
+    // if (chosenPopulation === correctPopulation) {
+        alert("Correct Population!");
+    // } else {
+        // alert("Incorrect population. The correct population is " + correctPopulation);
+    // }
+// }
 
 
 function displayCountry (randomCountry) {
