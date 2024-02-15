@@ -201,7 +201,8 @@ let randomCountry;
 // Start running game after DOM has loaded, add event listeners to buttons - (taken from Love Maths)
 
 document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
+    // Query selector from #SmartCode Javascript tutorial - isolate start and submit button
+    let buttons = document.querySelectorAll(".game-buttons");
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
