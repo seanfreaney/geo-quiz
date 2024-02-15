@@ -253,21 +253,21 @@ function checkAnswer () {
 
     // Check answer method taken from Love Maths
     // Take values from input elements and trim whitespace
-    let userAnswerCity = document.getElementById("box1").value.trim();
-    let userAnswerLanguage = document.getElementById("box2").value.trim();
+    let userAnswerCity = document.getElementById("box1").value.trim().toLowerCase();
+    let userAnswerLanguage = document.getElementById("box2").value.trim().toLowerCase();
 
     // Call correctAnswer to get correct capital and languages
-    let [correctCapital, correctLanguages, population] = correctAnswer(); // Array destructuring to get capital, languages and population - MDN web docs
+    let [correctCapital, correctLanguages, correctPopulation] = correctAnswer(); // Array destructuring to get capital, languages and population - MDN web docs
 
     // Check capital city answer
-    if (userAnswerCity.toLowerCase() === correctCapital.toLowerCase()) {
+    if (userAnswerCity === correctCapital.toLowerCase()) {
         alert("Correct city")
     } else {
         alert("Incorrect. The correct city was " + correctCapital);
     }
 
     // Check language answer - allow for  (W3 Schools find method) & Bro Code javascript arrow functions tutorial
-    let languageMatch = correctLanguages.find(language => language.toLowerCase() === userAnswerLanguage.toLowerCase());
+    let languageMatch = correctLanguages.find(language => language.toLowerCase() === userAnswerLanguage);
     if (languageMatch) {
         alert("Correct language!");
     } else {
@@ -279,9 +279,6 @@ function checkAnswer () {
 
     // Get the chosen population value from the selected radio button's span using nextSiblingElement - geeksforgeeks.org & dcode tutorial
     let chosenPopulation = parseFloat(chosenButton.nextElementSibling.textContent); // parseFloat flexiple.com
-
-    // Call correctAnswer to get the correct population
-    let correctPopulation = correctAnswer()[2];
 
     // Check if the chosen population matches the correct population
     if (chosenPopulation === correctPopulation) {
