@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
-                // checkAnswerPopulation();
+                checkAnswerPopulation();
             } else {
                 let game = this.getAttribute("data-type");
                 runGame(game);
@@ -279,7 +279,23 @@ function checkAnswer () {
     }
 }
 
-// function checkAnswerPopulation(population) {
+function checkAnswerPopulation(population) {
+
+    // get selected radio button value
+    let chosenButton = document.querySelector('input[name="population"]:checked');
+
+    // Get the chosen population value from the selected radio button's span using nextSiblingElement - geeksforgeeks.org & dcode tutorial
+    let chosenPopulation = parseFloat(chosenButton.nextElementSibling.textContent); // parseFloat flexiple.com
+
+    // Call correctAnswer to get the correct population
+    let correctPopulation = correctAnswer()[2];
+
+    // Check if the chosen population matches the correct population
+    if (chosenPopulation === correctPopulation) {
+        alert("Correct Population!");
+    } else {
+        alert("Incorrect population. The correct population is " + correctPopulation);
+    }
 
     // Youtube #SmartCode Javascript tutorials - querySelector
     // Select button with 'population class'
@@ -297,7 +313,7 @@ function checkAnswer () {
         // }
     // }); 
     
-// }
+}
 
 
 function displayCountry (randomCountry) {
