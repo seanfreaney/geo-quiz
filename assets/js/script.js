@@ -113,13 +113,13 @@ const countries = [
     name: "Luxembourg",
     capital: "Luxembourg",
     language: ["Luxembourgish", "French", "German"],
-    population: 0.654
+    population: 0.65
 },
 {
     name: "Malta",
     capital: "Valletta",
     language: ["Maltese"],
-    population: 0.535
+    population: 0.54
 },
 {
     name: "Netherlands",
@@ -161,25 +161,25 @@ const countries = [
     name: "Spain",
     capital: "Madrid",
     language: ["Spanish"],
-    population: 47.5
+    population: 47.50
 },
 {
     name: "Sweden",
     capital: "Stockholm",
     language: ["Swedish"],
-    population: 10.6
+    population: 10.60
 },
 {
     name: "Russia",
     capital: "Moscow",
     language: ["Russian"],
-    population: 145.000000
+    population: 145.00
 },
 {
     name: "England",
     capital: "London",
     language: ["English"],
-    population: 56.000000
+    population: 56.00
 },
 {
     name: "Scotland",
@@ -191,7 +191,7 @@ const countries = [
     name: "Wales",
     capital: "Cardiff",
     language: ["Welsh", "English"],
-    population: 3.100000
+    population: 3.10
 }
 ];
 
@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
-                checkAnswerPopulation();
+                // checkAnswerPopulation();
             } else {
                 let game = this.getAttribute("data-type");
                 runGame(game);
@@ -261,7 +261,7 @@ function checkAnswer () {
     let userAnswerLanguage = document.getElementById("box2").value.trim();
 
     // Call correctAnswer to get correct capital and languages
-    let [correctCapital, correctLanguages] = correctAnswer(); // Array destructuring MDN web docs
+    let [correctCapital, correctLanguages, population] = correctAnswer(); // Array destructuring to get capital, languages and population - MDN web docs
 
     // Check capital city answer
     if (userAnswerCity.toLowerCase() === correctCapital.toLowerCase()) {
@@ -279,27 +279,25 @@ function checkAnswer () {
     }
 }
 
-function checkAnswerPopulation(population) {
+// function checkAnswerPopulation(population) {
 
-    // Youtube #SmartCode Javascript tutorials
-    // Select all buttons with 'population class'
-    let allButtons = document.querySelectorAll(".population");
+    // Youtube #SmartCode Javascript tutorials - querySelector
+    // Select button with 'population class'
+    // let button = document.querySelector(".population");
 
-    // register click event for each button
-    allButtons.forEach(bt =>{
-        bt.addEventListener('click', (e) =>{
-            // When a button is clicked, check value is equal to population
-            let chosenButton = parseFloat(e.target.innerHTML); // Parse ChosenButton value to float for comparison (Flexiple.com)
-            console.log("Chosen Button value:", chosenButton); // this function only works when I log this value to the console
-            console.log(population); // log value to console to compare values in attempt to debug
-            if (chosenButton === population) {
-                alert("Correct Population!")
-            } else {
-                alert("Incorrect population. The correct population is " + population);
-            }
-        });
-    });
-}
+    // register click event for the button
+    // button.addEventListener('click', function () {
+        // When the button is clicked, check if its inner HTML is equal to the population
+        // let chosenPopulation = parseFloat(this.innerHTML); // Parse inner HTML value to float for comparison
+        // console.log(chosenPopulation);
+        // if (chosenPopulation === population)  {
+        // alert("Correct Population!")
+        // } else {
+        // alert("Incorrect population. The correct population is " + population);
+        // }
+    // }); 
+    
+// }
 
 
 function displayCountry (randomCountry) {
@@ -315,9 +313,9 @@ function displayCountry (randomCountry) {
 
     // Display randomCountry name and population options
     document.getElementById("country").textContent = randomCountry;
-    document.getElementById("radio-pop").textContent = populations[0].toString();
-    document.getElementById("radio-pop1").textContent = populations[1].toString();
-    document.getElementById("radio-pop2").textContent = populations[2].toString();
+    document.getElementById("radio-pop").textContent = populations[0];
+    document.getElementById("radio-pop1").textContent = populations[1];
+    document.getElementById("radio-pop2").textContent = populations[2];
 }
 
 // Function to shuffle array elements - Fisher-Yates sorting Algorithim (freeCodeCamp)
