@@ -93,16 +93,19 @@ main {
 
 .population + span {
     font-family: 'Open Sans', sans-serif;
-    font-size: 0.75em;
-    height: fit-content;
-    /* background-color: rgba(255, 255, 255, 0.5); */
+    font-size: 0.6em;
+    background-color: rgba(255, 255, 255, 0.5);
     color: black;
     margin-left: 2px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 1px;
 }
 
-.population:active {
-    background-color: rgba(34, 139, 34, 1);
-}
+/* .population:active { */
+    /* background-color: rgba(34, 139, 34, 1); */
+/* } */
 
 #start-button {
     font-family: 'Open Sans', sans-serif;
