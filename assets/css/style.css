@@ -181,6 +181,11 @@ main {
         width: 65vw;
     }
 
+    .population + span {
+        font-size: 0.7em;
+    }
+
+
     .score-area {
         padding-left: 25px;
         padding-right: 25px;
@@ -209,6 +214,10 @@ main {
 
     .game-area {
         width: 50vw;
+    }
+
+    .population + span {
+        font-size: 0.8em;
     }
 
     .score-area {
