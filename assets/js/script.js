@@ -212,6 +212,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 let game = this.getAttribute("data-type");
                 runGame(game);
             }
+
+            // Focus on element with id 'box1' - logic from Love Maths
+            document.getElementById("box1").focus();
         });
     }
 });
@@ -287,10 +290,9 @@ function checkAnswer () {
         incrementIncorrect();
     }
 
-    // Clear the values in 'box1' and 'box2' - Love Maths
+    // Clear the values in 'box1' and 'box2' after answer submitted - Love Maths
     document.getElementById("box1").value = "";
     document.getElementById("box2").value = "";
-
     // Uncheck the radio button
     document.querySelector('input[name="population"]:checked').checked = false;
 
