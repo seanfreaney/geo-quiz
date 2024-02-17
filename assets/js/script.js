@@ -240,8 +240,7 @@ function runGame (game) {
         displayCountry(randomCountry);
         correctAnswer(); // Call correctAnswer after setting randomCountry
     }
-
-}
+};
 
 function correctAnswer () {
 
@@ -259,7 +258,7 @@ function correctAnswer () {
     
     return [correctCapital, correctLanguages, population];
 
-}
+};
 
 function checkAnswer () {
 
@@ -315,7 +314,7 @@ function checkAnswer () {
     // Re-run runGame(game) to display a new country
     runGame("start");
     
-}
+};
 
 function displayCountry (randomCountry) {
     // Get population from correctAnswer array
@@ -333,7 +332,7 @@ function displayCountry (randomCountry) {
     document.getElementById("radio-pop").textContent = populations[0];
     document.getElementById("radio-pop1").textContent = populations[1];
     document.getElementById("radio-pop2").textContent = populations[2];
-}
+};
 
 // Function to shuffle array elements - Fisher-Yates sorting Algorithim (freeCodeCamp)
 function shuffle(array) {
@@ -342,7 +341,7 @@ function shuffle(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
-}
+};
 
 // IncrementCorrect logic taken from Love Maths
 function incrementCorrect() {
@@ -350,7 +349,7 @@ function incrementCorrect() {
     let oldScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById("correct").innerText = ++oldScore;
 
-}
+};
 
 // IncrementIncorrect logic taken from Love Maths
 function incrementIncorrect() {
@@ -358,4 +357,4 @@ function incrementIncorrect() {
     let oldScore = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++oldScore;
 
-}
+};
