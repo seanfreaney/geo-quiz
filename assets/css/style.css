@@ -52,7 +52,7 @@ main {
 
 /* Question Div */
 
-#question {
+.question {
     justify-content: space-between;
     align-items: center;
     display: flex;
