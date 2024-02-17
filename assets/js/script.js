@@ -286,6 +286,16 @@ function checkAnswer () {
         alert(message);
         incrementIncorrect();
     }
+
+    // Clear the values in 'box1' and 'box2' - Love Maths
+    document.getElementById("box1").value = "";
+    document.getElementById("box2").value = "";
+
+    // Uncheck the radio button
+    document.querySelector('input[name="population"]:checked').checked = false;
+
+    // Re-run runGame(game) to display a new country
+    runGame("start");
     
 }
 
