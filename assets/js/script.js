@@ -255,9 +255,14 @@ function checkAnswer () {
     // Take values from input elements and trim whitespace
     let userAnswerCity = document.getElementById("box1").value.trim().toLowerCase();
     let userAnswerLanguage = document.getElementById("box2").value.trim().toLowerCase();
+    // Get selected radio button value
+    let chosenButton = document.querySelector('input[name="population"]:checked');
+    // Get the chosen population value from the selected radio button's span using nextSiblingElement - geeksforgeeks.org & dcode tutorial
+    let chosenPopulation = parseFloat(chosenButton.nextElementSibling.textContent); // parseFloat flexiple.com
 
-    // Call correctAnswer to get correct capital and languages
-    let [correctCapital, correctLanguages, correctPopulation] = correctAnswer(); // Array destructuring to get capital, languages and population - MDN web docs
+    // Call correctAnswer to get correct capital, languages and population 
+    // Array destructuring to assign capital, languages and population to allow for easy use in checking against the users answers in the DOM - MDN web docs
+    let [correctCapital, correctLanguages, correctPopulation] = correctAnswer(); 
 
     // Check capital answer
     let capitalCorrect = userAnswerCity === correctCapital.toLocaleLowerCase();
@@ -265,14 +270,10 @@ function checkAnswer () {
     // Check language answer - allow for all languages related to the country object to be accepted (W3 Schools find method) & Bro Code javascript arrow functions tutorial
     let languageMatch = correctLanguages.find(language => language.toLowerCase() === userAnswerLanguage);
     // Check population answer
-    // Get selected radio button value
-    let chosenButton = document.querySelector('input[name="population"]:checked');
-    // Get the chosen population value from the selected radio button's span using nextSiblingElement - geeksforgeeks.org & dcode tutorial
-    let chosenPopulation = parseFloat(chosenButton.nextElementSibling.textContent); // parseFloat flexiple.com
     let populationCorrect = chosenPopulation === correctPopulation;
 
     // Combine alert messages using ternary operator (freecodecamp.org Youtube - Beau teaches Javascript)
-    let message = capitalCorrect ? "Correct city" : "Incorrect city. The correct city was " + correctCapital;
+    let message = capitalCorrect ? "Correct city!" : "Incorrect city. The correct city was " + correctCapital;
     // use concatenation assignment operator and line break for string (simplilearn.com)
     message += "\n" + (languageMatch ? "Correct language!" : "Incorrect language. The correct language(s) is/are: " + correctLanguages.join(", ")); // join() from educba
     message += "\n" + (populationCorrect ? "Correct Population!" : "Incorrect population. The correct population is " + correctPopulation);
