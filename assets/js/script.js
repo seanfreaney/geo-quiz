@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// sketch functions (Love Maths)
+// Run the game on click of start button (Love Maths)
 
 function runGame (game) {
     
@@ -260,32 +260,49 @@ function checkAnswer () {
     let [correctCapital, correctLanguages, correctPopulation] = correctAnswer(); // Array destructuring to get capital, languages and population - MDN web docs
 
     // Check capital city answer
-    if (userAnswerCity === correctCapital.toLowerCase()) {
-        alert("Correct city")
-    } else {
-        alert("Incorrect. The correct city was " + correctCapital);
-    }
+    // if (userAnswerCity === correctCapital.toLowerCase()) {
+        // alert("Correct city")
+    // } else {
+        // alert("Incorrect. The correct city was " + correctCapital);
+    // }
 
     // Check language answer - allow for  (W3 Schools find method) & Bro Code javascript arrow functions tutorial
-    let languageMatch = correctLanguages.find(language => language.toLowerCase() === userAnswerLanguage);
-    if (languageMatch) {
-        alert("Correct language!");
-    } else {
-        alert("Incorrect language. The correct language(s) is/are: " + correctLanguages.join(", ")); // join() from educba
-    }
+    // let languageMatch = correctLanguages.find(language => language.toLowerCase() === userAnswerLanguage);
+    // if (languageMatch) {
+        // alert("Correct language!");
+    // } else {
+        // alert("Incorrect language. The correct language(s) is/are: " + correctLanguages.join(", ")); // join() from educba
+    // }
 
     // get selected radio button value
-    let chosenButton = document.querySelector('input[name="population"]:checked');
+    // let chosenButton = document.querySelector('input[name="population"]:checked');
 
     // Get the chosen population value from the selected radio button's span using nextSiblingElement - geeksforgeeks.org & dcode tutorial
-    let chosenPopulation = parseFloat(chosenButton.nextElementSibling.textContent); // parseFloat flexiple.com
+    // let chosenPopulation = parseFloat(chosenButton.nextElementSibling.textContent); // parseFloat flexiple.com
 
     // Check if the chosen population matches the correct population
-    if (chosenPopulation === correctPopulation) {
-        alert("Correct Population!");
-    } else {
-        alert("Incorrect population. The correct population is " + correctPopulation);
-    }
+    // if (chosenPopulation === correctPopulation) {
+        // alert("Correct Population!");
+    // } else {
+        // alert("Incorrect population. The correct population is " + correctPopulation);
+    // }
+
+    // Check capital answer
+    let capitalCorrect = userAnswerCity === correctCapital.toLocaleLowerCase();
+    // Check language answer
+    let languageMatch = correctLanguages.find(language => language.toLowerCase() === userAnswerLanguage);
+    // Check population answer
+    let chosenButton = document.querySelector('input[name="population"]:checked');
+    let chosenPopulation = parseFloat(chosenButton.nextElementSibling.textContent); // parseFloat flexiple.com
+    let populationCorrect = chosenPopulation === correctPopulation;
+
+    // Combine alert messages using ternary operator (freecodecamp.org Youtube - Beau teaches Javascript)
+    let message = capitalCorrect ? "Correct city" : "Incorrect. The correct city was " + correctCapital;
+    // use concatenation assignment operator 
+    message += "\n" + (languageMatch ? "Correct language!" : "Incorrect language. The correct language(s) is/are: " + correctLanguages.join(", "));
+    message += "\n" + (populationCorrect ? "Correct Population!" : "Incorrect population. The correct population is " + correctPopulation);
+
+    alert(message);
 
 }
 
@@ -315,3 +332,4 @@ function shuffle(array) {
     }
     return array;
 }
+
