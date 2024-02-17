@@ -217,6 +217,15 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("box1").focus();
         });
     }
+
+    // Listen for "keypress" event on the document - Love Maths
+    document.addEventListener("keypress", function (event) {
+        // Check if the pressed key is the "Enter" key
+        if (event.key === "Enter") {
+            // Call checkAnswer() function
+            checkAnswer();
+        }
+    });
 });
 
 // Run the game on click of start button (Love Maths)
