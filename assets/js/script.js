@@ -266,7 +266,6 @@ function checkAnswer () {
 
     // Check capital answer
     let capitalCorrect = userAnswerCity === correctCapital.toLocaleLowerCase();
-    // Check language answer
     // Check language answer - allow for all languages related to the country object to be accepted (W3 Schools find method) & Bro Code javascript arrow functions tutorial
     let languageMatch = correctLanguages.find(language => language.toLowerCase() === userAnswerLanguage);
     // Check population answer
@@ -278,8 +277,16 @@ function checkAnswer () {
     message += "\n" + (languageMatch ? "Correct language!" : "Incorrect language. The correct language(s) is/are: " + correctLanguages.join(", ")); // join() from educba
     message += "\n" + (populationCorrect ? "Correct Population!" : "Incorrect population. The correct population is " + correctPopulation);
 
-    alert(message);
-
+    // Use of isCorrect logic from Love Maths 
+    let isCorrect = capitalCorrect && languageMatch && populationCorrect;
+    if (isCorrect) {
+        alert(message);
+        incrementCorrect();
+    } else {
+        alert(message);
+        incrementIncorrect();
+    }
+    
 }
 
 function displayCountry (randomCountry) {
@@ -309,3 +316,18 @@ function shuffle(array) {
     return array;
 }
 
+// IncrementCorrect logic taken from Love Maths
+function incrementCorrect() {
+
+    let oldScore = parseInt(document.getElementById("correct").innerText);
+    document.getElementById("correct").innerText = ++oldScore;
+
+}
+
+// IncrementIncorrect logic taken from Love Maths
+function incrementIncorrect() {
+
+    let oldScore = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++oldScore;
+
+}
