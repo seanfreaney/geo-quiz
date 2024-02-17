@@ -269,6 +269,13 @@ function checkAnswer () {
     let userAnswerLanguage = document.getElementById("box2").value.trim().toLowerCase();
     // Get selected radio button value
     let chosenButton = document.querySelector('input[name="population"]:checked');
+    // to counter error being displayed to console when user hits 'submit' without selecting population answer - unsure of how to best address this!
+    // this is a workaround that needs to be fixed
+    if (!chosenButton) {
+        // Handle the case where no radio button is selected
+        alert("Please ensure all answers are filled in.");
+        return; // Exit the function early
+    }
     // Get the chosen population value from the selected radio button's span using nextSiblingElement - geeksforgeeks.org & dcode tutorial
     let chosenPopulation = parseFloat(chosenButton.nextElementSibling.textContent); // parseFloat flexiple.com
 
