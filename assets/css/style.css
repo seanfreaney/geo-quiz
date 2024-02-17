@@ -50,7 +50,6 @@ main {
 
 }
 
-
 /* Question Div */
 
 #question {
@@ -59,7 +58,7 @@ main {
     display: flex;
     padding-left: 5px;
     padding-right: 5px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
     color: black;
     font-weight: bold;
     border-radius: 10px;
@@ -72,7 +71,7 @@ main {
     font-weight: bold;
     text-align: center;
     width: 45%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 10px;
     border: 2px solid grey;
     margin-left: 4px;
@@ -95,7 +94,7 @@ main {
 .population + span {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.6em;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255);
     color: black;
     margin-left: 2px;
     border: 2px solid grey;
@@ -112,7 +111,7 @@ main {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9em;
     height: fit-content;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
     color: black;
     font-weight: bold;
     border-radius: 10px;
@@ -128,7 +127,7 @@ main {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9em;
     height: fit-content;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
     color: black;
     font-weight: bold;
     border-radius: 10px;
@@ -148,7 +147,7 @@ main {
     display: flex;
     padding-left: 5px;
     padding-right: 5px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
     color: black;
     font-weight: bold;
     border-radius: 10px;
