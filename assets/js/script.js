@@ -293,7 +293,7 @@ function checkAnswer () {
     let message = capitalCorrect ? "Correct city!" : "Incorrect city. The correct city was " + correctCapital;
     // use concatenation assignment operator and line break for string (simplilearn.com)
     message += "\n" + (languageMatch ? "Correct language!" : "Incorrect language. The correct language(s) is/are: " + correctLanguages.join(", ")); // join() from educba
-    message += "\n" + (populationCorrect ? "Correct Population!" : "Incorrect population. The correct population is " + correctPopulation);
+    message += "\n" + (populationCorrect ? "Correct Population!" : "Incorrect population. The correct population is " + correctPopulation + "m");
 
     // Use of isCorrect logic from Love Maths 
     let isCorrect = capitalCorrect && languageMatch && populationCorrect;
