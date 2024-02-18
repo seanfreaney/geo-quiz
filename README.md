@@ -1,39 +1,117 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Geo Quiz
 
-Welcome,
+Placeholder for intro
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Existing Features
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+### Feature 1
+- __Feature 1__
 
-## Codeanywhere Reminders
+  - Point1.
+  - Point2.
+  - Image
+  
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+### Feature 2
+- __Feature 2__
 
-`python3 -m http.server`
+  - Point1.
+  - Point2.
+  - Image
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Feature 3 
+- __Feature 3__
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+  - Point1.
+  - Point2.
+  - Image
 
-`http_server`
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Additional 
+- __Additional__
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+  - Point1.
+  - Point2.
+  - Image
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Testing
 
----
+### Testing Table TBU
 
-Happy coding!
+| Action    | Expectation | Result | 
+| ---------|:-------------------:|----------|
+| Enter URL | Arrive at Home | Pass |
+| Click Logo | Arrive at Home | Pass |
+| Click Home | Arrive at Home | Pass |
+| Click Home | Arrive at Home, Home link underlined | Pass |
+| Click Long Game | Arrive at Long Game | Pass |
+| Click Long Game | Arrive at Long Game, Long Game underlined | Pass |
+| Click Short Game | Arrive at Short Game | Pass |
+| Click Short Game | Arrive at Short Game, Short Game underlined | Pass |
+| Click Facebook Logo | Arrive at Facebook Home | Pass |
+| Click X Logo | Arrive at X Home | Pass |
+| Click Instagram Logo | Arrive at Instagram Home | Pass |
+| Click Youtube Logo | Arrive at Youtube Home | Pass |
+| Click Videos (Long Game) | Video plays | Pass |
+| Click Videos Fullscreen (Long Game) | Video plays Fullscreen | Pass |
+| Click Videos (Short Game) | Video plays | Pass |
+| Click Videos Fullscreen (Short Game) | Video plays | Pass |
+| Header Responsivity | Change for screen size | Pass |
+| Footer Responsivity | Change for screen size | Pass |
+| Text Responsivity | Change for screen size | Pass |
+| Video container Responsivity | Change for screen size | Pass |
+
+  
+
+### Validator Testing
+- __HTML__
+  - No errors returend through W3C validator.
+  - Screenshot
+
+- __CSS__
+  - No errors returned through jigsaw validator.
+  - Screenshot
+
+- __Javascript__
+  - No errors returned through jshint validator.
+  - Screenshot
+
+### Unfixed Bugs
+- __Video Content__
+  - I would like to add additional styling to video containers. I want to only show one video in each container at a time and allow users to click an arrow to scroll through to their preferred video.(I did some research and this required javascript).
+
+
+## Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+- The live link can be found here: <https://seanfreaney.github.io/geo-quiz/>
+
+## Credits
+
+### Multiple TBU here
+W3C Schools
+
+
+### Font Awesome
+- __Link__
+  - Youtube
+  - <https://www.youtube.com/watch?v=8-VRIEaIKqI>
+
+### Icons8
+- __Icon__
+  - Icon from Icons8.
+
+### Media
+- __Population data__
+  - Populations (Note here on intent to update) - https://www.worldometers.info/population/countries-in-europe-by-population/
+- __Images__
+  - __Freepik.com__
+  - Background image.
+ 
