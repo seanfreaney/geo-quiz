@@ -27,12 +27,25 @@ Placeholder for intro
   - Image
 
 
-### Additional 
-- __Additional__
+### Additional Features 
+- __Time Sensitivity__
 
-  - Point1.
-  - Point2.
-  - Image
+  - I would like to add an egg timer which would start to countdown on click of 'start' button.
+  - I would like the user to select 'easy', 'medium' or 'hard' to determine the amount of time allotted.
+
+- __Increase Countries Array__
+
+  - I would like to increase the countries array to include more countries.
+
+- __Select Continent to be tested__
+
+  - Once the countries array is complete (includes all countries), I would like to add a 'continent' value to the countries array.
+  - I would then like to change the HTML and Javascript to allow the user to select the continent to be tested.
+
+- __Automatically updating data__
+
+ - I would like to figure out how I could add more values to the countries array and have them update automatically. This would be really cool to keep the population data up to date with the most recent census but also include things like 'current president' etc.
+  
 
 
 
@@ -79,9 +92,12 @@ Placeholder for intro
   - No errors returned through jshint validator.
   - Screenshot
 
-### Unfixed Bugs
-- __Video Content__
-  - I would like to add additional styling to video containers. I want to only show one video in each container at a time and allow users to click an arrow to scroll through to their preferred video.(I did some research and this required javascript).
+### Unfixed Bugs / Issues
+- __Population value Spans__
+  - When the page is first loaded, the spans which hold the population values display empty. This is a little bit unsightly and I didn't have time to figure out how to only have these elements displayed once the 'start' button is selected.
+
+- __Submitting empty fields__
+  - Currently, if the user doesn't select a population value and hits 'submit' they receive a message saying 'Please ensure all answers are filled in.'. I'm sure there is a better way to handle users not entering data but this was an easy fix to address the user not answering all questions ie if they haven't selected a population, they haven't answered all questions. This is addressed in the checkAnswer function.
 
 
 ## Deployment
