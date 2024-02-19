@@ -4,12 +4,52 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 
 ## Existing Features
 
+### Game Logic
+- Countires array lists numerous objects. These objects have key-value pairs representing different attributes of the object;
+  - 'name': name of the country,
+  - 'capital': capital city of the country, 
+  - 'language': array containing the language(s) spoken in the country, and
+  - 'population': rounded population value.
+
+- When the user hits 'start';
+  - an object is randomly selected from the countries array,
+  - the 'name' of the object is displayed to the DOM,
+  - the 'population' value of the object is increased and reduced by 10% and all three values are displayed to the DOM. These values are displayed randomly across three elements in the DOM to ensure the user can't simply select the same button for correct population each time, and
+  - the user's cursor is brought to the input field for 'Capital City'.
+
+- The user then enters answers in the input fields for 'Capital City' and 'Language' and clicks one of the population values.
+
+- When the user hits 'submit';
+  - the user receives an alert informing them if their answer was correct. If the answer is incorrect they receive the correct answer(s).
+  - the count of correct or incorrect answers tally in the bottom of the screen, and
+  - the game re-runs displaying another randomly selected country.
+
 ### Interactive User Interface
-- __multiple__ 
-  Highlight
-  - Point2.
-  - Image
-  
+- __Button Colours__ 
+  - 'start', 'submit' and population buttons change colour on hover.
+  - IMAGES
+
+- __Mouse Clicks & Keyboard Input__
+  - 'start', 'submit' and population buttons are all responsive to mouse clicks;
+    -'start' runs game and focuses cursor to input field,
+    -'population' provides user's answer to checkAnswer function,
+    -'submit' shows alter, tallies score, re-runs game and focuses cursor to input field.
+  - 'submit' button is also responsive to 'Enter' keyboard input.
+  _IMAGES
+
+-__Cursor Focus__
+  - Cursor focus is used to bring the user to the first input field to enhance user experience.
+
+-__Display Data to the DOM__
+  - Object name is displayed to the DOM,
+  - Object population, population +10% and population -10% is displayed randomly across three different spans. This ensures that the correct population value is not always displayed to the same element.
+
+### Simple Layout and Background  
+-__Background__
+  - Simple background image was used which shows an aesthetically pleasing world map.
+  - IMAGE
+  - Simple display boxes and buttons use opacity to ensure adequate contrast while complementing the image.
+  - display boxes IMAGE
 
 ### Answer Validation
 - __Feature 2__
