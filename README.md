@@ -10,14 +10,16 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   - 'capital': capital city of the country, 
   - 'language': array containing the language(s) spoken in the country, and
   - 'population': rounded population value.
-![alt text](assets/images/loaded-screen-no-start.png)
+
+- When the page is loaded, the DOM is not yet displaying the question data.
+![Loaded screen with no data displayed](assets/images/loaded-screen-no-start.png)
 
 - When the user hits 'start';
   - an object is randomly selected from the countries array,
   - the 'name' of the object is displayed to the DOM,
   - the 'population' value of the object is increased and reduced by 10% and all three values are displayed to the DOM. These values are displayed randomly across three elements in the DOM to ensure the user can't simply select the same button for correct population each time, and
   - the user's cursor is brought to the input field for 'Capital City'.
-![alt text](assets/images/post-start-data-displayed.png)
+![Screen when game has been run, data displayed](assets/images/post-start-data-displayed.png)
 
 - The user then enters answers in the input fields for 'Capital City' and 'Language' and clicks one of the population values.
 
@@ -25,13 +27,15 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   - the user receives an alert informing them if their answer was correct. If the answer is incorrect they receive the correct answer(s).
   - the count of correct or incorrect answers tally in the bottom of the screen, and
   - the game re-runs displaying another randomly selected country.
-![alt text](assets/images/submit-answer.png)
+![Answer has been submitted](assets/images/submit-answer.png)
 
 ### Interactive User Interface
 - __Button Colours__ 
   - 'start', 'submit' and population buttons change colour on hover.
   ![Start button on hover](assets/images/start-button.png)
+  ( <br> )
   ![Population button on hover](assets/images/population-button.png)
+  ( <br> )
   ![Submit button on hover](assets/images/submit-button.png)
 
 - __Mouse Clicks & Keyboard Input__
@@ -58,8 +62,8 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 ### Answer Validation & User Alert
   - The code validates user-provided answers by comparing them with the correct answers stored in the countries array.
   - It provides feedback to users, indicating whether their answers are correct or incorrect.
-![alt text](assets/images/user-alert.png)
-![alt text](assets/images/submit-no-answer.png)
+![User alert on submission of answer](assets/images/user-alert.png)
+![User alert if question not fully answered](assets/images/submit-no-ans-new.png)
 
 ### Score Tracking 
 - The game tracks users' scores, incrementing counts for both correct and incorrect answers.
