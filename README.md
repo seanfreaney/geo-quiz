@@ -11,13 +11,13 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   - 'language': array containing the language(s) spoken in the country, and
   - 'population': rounded population value.
 
-- When the page is loaded, the DOM is not yet displaying the question data.
+- When the page is loaded, the question data is not yet displaying.
 ![Loaded screen with no data displayed](assets/images/loaded-screen-no-start.png)
 
 - When the user hits 'start';
   - an object is randomly selected from the countries array,
-  - the 'name' of the object is displayed to the DOM,
-  - the 'population' value of the object is increased and reduced by 10% and all three values are displayed to the DOM. These values are displayed randomly across three elements in the DOM to ensure the user can't simply select the same button for correct population each time, and
+  - the 'name' of the object is displayed,
+  - the 'population' value of the object is increased and reduced by 10% and all three values are displayed. These values are displayed randomly across three elements to ensure the user can't simply select the same button for correct population each time, and
   - the user's cursor is brought to the input field for 'Capital City'.
 ![Screen when game has been run, data displayed](assets/images/post-start-data-displayed.png)
 
@@ -40,20 +40,20 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 
 - __Mouse Clicks & Keyboard Input__
   - 'start', 'submit' and population buttons are all responsive to mouse clicks;
-    -'start' runs game and focuses cursor to input field,
-    -'population' provides user's answer to checkAnswer function,
-    -'submit' shows alter, tallies score, re-runs game and focuses cursor to input field.
+      -'start' runs game and focuses cursor to input field,
+      -'population' provides user's answer to checkAnswer function,
+      -'submit' shows alter, tallies score, re-runs game and focuses cursor to input field.
   - 'submit' button is also responsive to 'Enter' keyboard input.
   
--__Initial Focus__
+- __Initial Focus__
   - Initial focus is used to bring the user stright to the Capital City input field to enhance user experience.
 
--__Display Data__
+- __Display Data__
   - Country name is displayed in response to user actions,
   - Country population, population +10% and population -10% is displayed randomly across three different spans in response to user actions. This ensures that the correct population value is not always displayed to the same element.
 
 ### Simple Layout and Background  
--__Background__
+- __Background__
   - Simple background image was used which shows an aesthetically pleasing world map.
   ![Background image](assets/images/0zaq_ag24_210203.jpg)
   - Simple display boxes and buttons use opacity to ensure adequate contrast while complementing the image.
@@ -122,9 +122,6 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 ### Unfixed Bugs / Issues
 - __Population value Spans__
   - When the page is first loaded, the spans which hold the population values display empty. This is a little bit unsightly and I didn't have time to figure out how to only have these elements displayed once the 'start' button is selected.
-
-- __Submitting empty fields__
-  - Currently, if the user doesn't select a population value and hits 'submit' they receive a message saying 'Please ensure all answers are filled in.'. I'm sure there is a better way to handle users not entering data but this was an easy fix to address the user not answering all questions ie if they haven't selected a population, they haven't answered all questions. This is addressed in the checkAnswer function.
 
 ## Deployment
 
