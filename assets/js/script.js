@@ -199,7 +199,6 @@ const countries = [
 let randomCountry;
 
 // Start running game after DOM has loaded, add event listeners to buttons - (taken from Love Maths)
-
 document.addEventListener("DOMContentLoaded", function () {
     // Query selector from #SmartCode Javascript tutorial - isolate start and submit button
     let buttons = document.querySelectorAll(".game-buttons");
@@ -229,7 +228,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Run the game on click of start button (Love Maths)
-
 function runGame (game) {
     
     // generate random country from countries array
@@ -242,9 +240,10 @@ function runGame (game) {
     }
 };
 
+// Function to call correct answers to questions displayed in the DOM
 function correctAnswer () {
 
-    // Find country object from the countries array (W3 Schools find method)
+    // Find country object from the countries array (W3 Schools find method & Bro Code javascript arrow functions tutorial)
     let country = countries.find(country => country.name === randomCountry);
 
     // Find capital of the country object
@@ -257,9 +256,12 @@ function correctAnswer () {
     let population = country.population;
     
     return [correctCapital, correctLanguages, population];
-
 };
 
+// Function to check each answer submitted by user is correct/incorrect, 
+// display an alert to the user on submission of answer,
+// clear the user's answers from inout fields on submit, and
+// re-run the game on submit 
 function checkAnswer () {
 
     // Check answer method taken from Love Maths
@@ -313,9 +315,9 @@ function checkAnswer () {
 
     // Re-run runGame(game) to display a new country
     runGame("start");
-    
 };
 
+// Function to display country name and population values to the user
 function displayCountry (randomCountry) {
     // Get population from correctAnswer array
     let population = correctAnswer()[2];
@@ -343,18 +345,16 @@ function shuffle(array) {
     return array;
 };
 
-// IncrementCorrect logic taken from Love Maths
+// Function to increment correct answers. Logic taken from Love Maths
 function incrementCorrect() {
 
     let oldScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById("correct").innerText = ++oldScore;
-
 };
 
-// IncrementIncorrect logic taken from Love Maths
+// Function to increment incorrect answers. Logic taken from Love Maths
 function incrementIncorrect() {
 
     let oldScore = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++oldScore;
-
 };
