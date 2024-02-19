@@ -40,9 +40,9 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 
 - __Mouse Clicks & Keyboard Input__
   - 'start', 'submit' and population buttons are all responsive to mouse clicks;
-      -'start' runs game and focuses cursor to input field,
-      -'population' provides user's answer to checkAnswer function,
-      -'submit' shows alter, tallies score, re-runs game and focuses cursor to input field.
+    -'start' runs game and focuses cursor to input field,   
+    -'population' provides user's answer to checkAnswer function,   
+    -'submit' shows alert, tallies score, re-runs game and focuses cursor to input field.   
   - 'submit' button is also responsive to 'Enter' keyboard input.
   
 - __Initial Focus__
