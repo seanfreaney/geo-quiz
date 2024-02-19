@@ -91,7 +91,7 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   
 ## Testing
 
-### Testing Table TBU
+### Testing Table
 
 | Action    | Expectation | Result | 
 | ---------|:-------------------:|----------|
