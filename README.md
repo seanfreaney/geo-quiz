@@ -85,10 +85,6 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 
  - I would like to figure out how I could add more values to the countries array and have them update automatically. This would be really cool to keep the population data up to date with the most recent census but also include things like 'current president' etc.
   
-
-
-
-
 ## Testing
 
 ### Testing Table TBU
@@ -96,27 +92,17 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 | Action    | Expectation | Result | 
 | ---------|:-------------------:|----------|
 | Enter URL | Arrive at Home | Pass |
-| Click Logo | Arrive at Home | Pass |
-| Click Home | Arrive at Home | Pass |
-| Click Home | Arrive at Home, Home link underlined | Pass |
-| Click Long Game | Arrive at Long Game | Pass |
-| Click Long Game | Arrive at Long Game, Long Game underlined | Pass |
-| Click Short Game | Arrive at Short Game | Pass |
-| Click Short Game | Arrive at Short Game, Short Game underlined | Pass |
-| Click Facebook Logo | Arrive at Facebook Home | Pass |
-| Click X Logo | Arrive at X Home | Pass |
-| Click Instagram Logo | Arrive at Instagram Home | Pass |
-| Click Youtube Logo | Arrive at Youtube Home | Pass |
-| Click Videos (Long Game) | Video plays | Pass |
-| Click Videos Fullscreen (Long Game) | Video plays Fullscreen | Pass |
-| Click Videos (Short Game) | Video plays | Pass |
-| Click Videos Fullscreen (Short Game) | Video plays | Pass |
-| Header Responsivity | Change for screen size | Pass |
-| Footer Responsivity | Change for screen size | Pass |
-| Text Responsivity | Change for screen size | Pass |
-| Video container Responsivity | Change for screen size | Pass |
-
-  
+| Click Start | Generate Country Name | Pass |
+| Click Start | Generate Country Population Values | Pass |
+| Click Submit (incomplete answers) | Display Appropirate Alert | Pass |
+| Click Submit (correct answers) | Display Appropirate Alert | Pass |
+| Click Submit (incorrect answers) | Display Appropirate Alert | Pass |
+| Click Submit (incorrect & correct answers) | Display Appropirate Alert | Pass |
+| Click Submit | Increment Score | Pass |
+| Hover Mouse on Start | Change Colour | Pass |
+| Hover Mouse on Submit | Change Colour | Pass |
+| Hover Mouse on Population Vlaues | Change Colour | Pass |
+| Screen Responsivity | Change Styling Appropriately | Pass |
 
 ### Validator Testing
 - __HTML__
