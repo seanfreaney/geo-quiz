@@ -31,12 +31,12 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 
 ### Interactive User Interface
 - __Button Colours__ 
-  - 'start',  and population buttons change colour on hover.
-  ![Start button on hover](assets/images/start-button.png)
-  - 'population' buttons change colour on hover.
-  ![Population button on hover](assets/images/population-button.png)
-  - 'submit' button changes colour on hover.
-  ![Submit button on hover](assets/images/submit-button.png)
+  - 'start',  and population buttons change colour on hover.  
+  ![Start button on hover](assets/images/start-button.png).     
+  - 'population' buttons change colour on hover.     
+  ![Population button on hover](assets/images/population-button.png)     
+  - 'submit' button changes colour on hover.      
+  ![Submit button on hover](assets/images/submit-button.png)     
 
 - __Mouse Clicks & Keyboard Input__
   - 'start', 'submit' and population buttons are all responsive to mouse clicks;
@@ -45,12 +45,12 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
     -'submit' shows alter, tallies score, re-runs game and focuses cursor to input field.
   - 'submit' button is also responsive to 'Enter' keyboard input.
   
--__Cursor Focus__
-  - Cursor focus is used to bring the user to the first input field to enhance user experience.
+-__Initial Focus__
+  - Initial focus is used to bring the user stright to the Capital City input field to enhance user experience.
 
--__Display Data to the DOM__
-  - Object name is displayed to the DOM,
-  - Object population, population +10% and population -10% is displayed randomly across three different spans. This ensures that the correct population value is not always displayed to the same element.
+-__Display Data__
+  - Country name is displayed in response to user actions,
+  - Country population, population +10% and population -10% is displayed randomly across three different spans in response to user actions. This ensures that the correct population value is not always displayed to the same element.
 
 ### Simple Layout and Background  
 -__Background__

@@ -264,14 +264,22 @@ function correctAnswer () {
 // re-run the game on submit 
 function checkAnswer () {
 
+    // Check if input fields are empty
+    let cityInput = document.getElementById("box1").value.trim();
+    let languageInput = document.getElementById("box2").value.trim();
+
+    if (cityInput === "" || languageInput === "") {
+        alert("Please ensure all answers are filled in.");
+        return; // Exit the function early
+    }
+
     // Check answer method taken from Love Maths
     // Take values from input elements and trim whitespace
     let userAnswerCity = document.getElementById("box1").value.trim().toLowerCase();
     let userAnswerLanguage = document.getElementById("box2").value.trim().toLowerCase();
     // Get selected radio button value
     let chosenButton = document.querySelector('input[name="population"]:checked');
-    // to counter error being displayed to console when user hits 'submit' without selecting population answer - unsure of how to best address this!
-    // this is a workaround that needs to be fixed
+    // to counter error being displayed to console when user hits 'submit' without selecting population answer - unsure of how to best address this combined within lines 267-275!
     if (!chosenButton) {
         // Handle the case where no radio button is selected
         alert("Please ensure all answers are filled in.");
