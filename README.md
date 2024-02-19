@@ -33,9 +33,9 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 - __Button Colours__ 
   - 'start', 'submit' and population buttons change colour on hover.
   ![Start button on hover](assets/images/start-button.png)
-  ( <br> )
+  <br> 
   ![Population button on hover](assets/images/population-button.png)
-  ( <br> )
+  <br> 
   ![Submit button on hover](assets/images/submit-button.png)
 
 - __Mouse Clicks & Keyboard Input__
