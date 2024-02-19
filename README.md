@@ -10,12 +10,14 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   - 'capital': capital city of the country, 
   - 'language': array containing the language(s) spoken in the country, and
   - 'population': rounded population value.
+- loaded-screen-no-start
 
 - When the user hits 'start';
   - an object is randomly selected from the countries array,
   - the 'name' of the object is displayed to the DOM,
   - the 'population' value of the object is increased and reduced by 10% and all three values are displayed to the DOM. These values are displayed randomly across three elements in the DOM to ensure the user can't simply select the same button for correct population each time, and
   - the user's cursor is brought to the input field for 'Capital City'.
+- post-start
 
 - The user then enters answers in the input fields for 'Capital City' and 'Language' and clicks one of the population values.
 
@@ -23,6 +25,7 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   - the user receives an alert informing them if their answer was correct. If the answer is incorrect they receive the correct answer(s).
   - the count of correct or incorrect answers tally in the bottom of the screen, and
   - the game re-runs displaying another randomly selected country.
+- submit-answer
 
 ### Interactive User Interface
 - __Button Colours__ 
@@ -51,20 +54,15 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   - Simple display boxes and buttons use opacity to ensure adequate contrast while complementing the image.
   - display boxes IMAGE
 
-### Answer Validation
-- __Feature 2__
+### Answer Validation & User Alert
+  - The code validates user-provided answers by comparing them with the correct answers stored in the countries array.
+  - It provides feedback to users, indicating whether their answers are correct or incorrect.
 
-  - Point1.
-  - Point2.
-  - Image
 
 ### Score Tracking 
-- __Feature 3__
-
-  - Point1.
-  - Point2.
-  - Image
-
+- The game tracks users' scores, incrementing counts for both correct and incorrect answers.
+- The scores are displayed to users, allowing them to track their performance throughout the game session.
+- IMAGE
 
 ### Additional Features 
 - __Time Sensitivity__
