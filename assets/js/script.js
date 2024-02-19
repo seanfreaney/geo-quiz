@@ -279,7 +279,7 @@ function checkAnswer () {
     let userAnswerLanguage = document.getElementById("box2").value.trim().toLowerCase();
     // Get selected radio button value
     let chosenButton = document.querySelector('input[name="population"]:checked');
-    // to counter error being displayed to console when user hits 'submit' without selecting population answer - unsure of how to best address this combined within lines 267-275!
+    // to ensure user selects population answer - unsure of how to best address this combined within lines 267-275!
     if (!chosenButton) {
         // Handle the case where no radio button is selected
         alert("Please ensure all answers are filled in.");
