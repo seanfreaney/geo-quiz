@@ -128,7 +128,6 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 - __Submitting empty fields__
   - Currently, if the user doesn't select a population value and hits 'submit' they receive a message saying 'Please ensure all answers are filled in.'. I'm sure there is a better way to handle users not entering data but this was an easy fix to address the user not answering all questions ie if they haven't selected a population, they haven't answered all questions. This is addressed in the checkAnswer function.
 
-
 ## Deployment
 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -140,14 +139,56 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 
 ## Credits
 
-### Multiple TBU here
-W3C Schools
+### Javascript logic
+- __Love Maths__
+  - Code to start running game after the DOM has loaded - referenced in comment,
+  - Cursor focus to 'box1' input field,
+  - Listen for 'keypress' event on the document,
+  - runGame function logic,
+  - adaptation of the checkAnswer function logic. (My checkAnswer function grew to become a little too complex),
+  - Use of isCorrect logic in checkAnswer function,
+  - Clearing of user inputs on submit in checkAnswer function,
+  - Increment correct and incorrect scores.
 
+- __find()__
+  - this logic was used in the correctAnswer and checkAnswer functions.
+  - W3 Schools - <https://www.w3schools.com/jsref/jsref_find.asp>
 
-### Font Awesome
-- __Link__
-  - Youtube
-  - <https://www.youtube.com/watch?v=8-VRIEaIKqI>
+- __Arrow Functions__
+ - this logic was used in the correctAnswer and checkAnswer functions.
+ - Bro Code Arrow Functions javascript tutorial - <https://www.youtube.com/watch?v=fRRRkognpOs>
+
+- __join()__
+  - this logic was used in displaying the user an alert related to their language answer to show and combine the languages array from the language key.
+  - EDUCBA - <https://www.educba.com/javascript-join/>
+
+- __Array Destructuring__
+  - used in the checkAnswer function.
+  - MDN web docs - <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment>
+
+- __toFixed()__
+  - used in the displayCoutry function.
+  - Base Dash - <https://www.basedash.com/blog/overview-the-javascript-number-tofixed-method>
+
+- __Fisher-Yates shuffle__
+  - used in the shuffle function and displayCountry function.
+  - Free Code Camp - <https://www.freecodecamp.org/news/how-to-shuffle-an-array-of-items-using-javascript-or-typescript/>
+
+- __querySelector()__
+  - used in Domcontent loaded and checkAnswer functions.
+  - MDN web docs - <https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector>
+
+- __nextElementSibling__
+  - used in checkAnswer function.
+  - Geeks for geeks - <https://www.geeksforgeeks.org/html-dom-nextelementsibling-property/>
+
+- __parseFloat__
+  - used in checkAnswer function.
+  - Flexiple - <https://flexiple.com/javascript/parsefloat-javascript>
+
+- __Ternary operators__
+ - used in message alert in checkAnswer function.
+ - Beau teaches Javascript <https://www.youtube.com/watch?v=s4sB1hm73tw>
 
 ### Icons8
 - __Icon__
