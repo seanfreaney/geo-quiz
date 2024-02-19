@@ -96,13 +96,11 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 | Action    | Expectation | Result | 
 | ---------|:-------------------:|----------|
 | Enter URL | Arrive at Home | Pass |
-| Click Start | Generate Country Name | Pass |
-| Click Start | Generate Country Population Values | Pass |
-| Click Submit (incomplete answers) | Display Appropirate Alert | Pass |
-| Click Submit (correct answers) | Display Appropirate Alert | Pass |
-| Click Submit (incorrect answers) | Display Appropirate Alert | Pass |
-| Click Submit (incorrect & correct answers) | Display Appropirate Alert | Pass |
-| Click Submit | Increment Score | Pass |
+| Click Start | Generate Country Name & Population Values | Pass |
+| Click Submit (all answers incomplete) | Display Appropirate Alert | Pass |
+| Click Submit (all answers correct) | Display Appropirate Alert, Increment Score, Generate Country Name & Population values | Pass |
+| Click Submit (all answers incorrect) | Display Appropirate Alert & Increment Score| Pass |
+| Click Submit (mix incorrect & correct answers) | Display Appropirate Alert & Increment Score | Pass |
 | Hover Mouse on Start | Change Colour | Pass |
 | Hover Mouse on Submit | Change Colour | Pass |
 | Hover Mouse on Population Vlaues | Change Colour | Pass |
