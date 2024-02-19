@@ -2,9 +2,7 @@
 
 Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge of capital cities, languages and populations of numerous countries. On clicking the 'start' button, a country is randomly generated and the user must asnwer with the country's capital city, language(s) and select the correct population. Ultimately, I would like to expand the list of countries included and enhance the interactivity of the site.
 
-## Existing Features
-
-### Game Logic
+## Game Logic
 - Countires array lists numerous objects. These objects have key-value pairs representing different attributes of the object;
   - 'name': name of the country,
   - 'capital': capital city of the country, 
@@ -17,8 +15,8 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 - When the user hits 'start';
   - an object is randomly selected from the countries array,
   - the 'name' of the object is displayed,
-  - the 'population' value of the object is increased and reduced by 10% and all three values are displayed. These values are displayed randomly across three elements to ensure the user can't simply select the same button for correct population each time, and
-  - the user's cursor is brought to the input field for 'Capital City'.
+  - the 'population' value of the object is increased and reduced by 10% and all three values are displayed (these values are displayed randomly across three elements to ensure the user can't simply select the same button for correct population each time), and
+  - the user's focus is brought to the input field for 'Capital City'.
 ![Screen when game has been run, data displayed](assets/images/post-start-data-displayed.png)
 
 - The user then enters answers in the input fields for 'Capital City' and 'Language' and clicks one of the population values.
@@ -29,10 +27,12 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   - the game re-runs displaying another randomly selected country.
 ![Answer has been submitted](assets/images/submit-answer.png)
 
+## Existing Features
+
 ### Interactive User Interface
 - __Button Colours__ 
-  - 'start',  and population buttons change colour on hover.  
-  ![Start button on hover](assets/images/start-button.png).     
+  - 'start', button changes colour on hover.  
+  ![Start button on hover](assets/images/start-button.png)      
   - 'population' buttons change colour on hover.     
   ![Population button on hover](assets/images/population-button.png)     
   - 'submit' button changes colour on hover.      
@@ -63,6 +63,7 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   - The code validates user-provided answers by comparing them with the correct answers stored in the countries array.
   - It provides feedback to users, indicating whether their answers are correct or incorrect.
 ![User alert on submission of answer](assets/images/user-alert.png)
+  - All answers must be complete by the user to all for submission.
 ![User alert if question not fully answered](assets/images/submit-no-ans-new.png)
 
 ### Score Tracking 
@@ -97,10 +98,10 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 | ---------|:-------------------:|----------|
 | Enter URL | Arrive at Home | Pass |
 | Click Start | Generate Country Name & Population Values | Pass |
-| Click Submit (all answers incomplete) | Display Appropirate Alert | Pass |
+| Click Submit (answers incomplete) | Display Appropirate Alert | Pass |
 | Click Submit (all answers correct) | Display Appropirate Alert, Increment Score, Generate Country Name & Population values | Pass |
-| Click Submit (all answers incorrect) | Display Appropirate Alert & Increment Score| Pass |
-| Click Submit (mix incorrect & correct answers) | Display Appropirate Alert & Increment Score | Pass |
+| Click Submit (all answers incorrect) | Display Appropirate Alert, Increment Score, Generate Country Name & Population values | Pass |
+| Click Submit (mix incorrect & correct answers) | Display Appropirate Alert, Increment Score, Generate Country Name & Population values | Pass |
 | Hover Mouse on Start | Change Colour | Pass |
 | Hover Mouse on Submit | Change Colour | Pass |
 | Hover Mouse on Population Vlaues | Change Colour | Pass |
@@ -109,15 +110,12 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 ### Validator Testing
 - __HTML__
   - No errors returend through W3C validator.
-  - Screenshot
 
 - __CSS__
   - No errors returned through jigsaw validator.
-  - Screenshot
 
 - __Javascript__
   - No errors returned through jshint validator.
-  - Screenshot
 
 ### Unfixed Bugs / Issues
 - __Population value Spans__
