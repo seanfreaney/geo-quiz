@@ -32,6 +32,7 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 ### Interactive User Interface
 - __Button Colours__ 
   - 'start', 'submit' and population buttons change colour on hover.
+  <br>
   ![Start button on hover](assets/images/start-button.png)
   <br> 
   ![Population button on hover](assets/images/population-button.png)
