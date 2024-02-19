@@ -39,7 +39,7 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   ![Submit button on hover](assets/images/submit-button.png)     
 
 - __Mouse Clicks & Keyboard Input__
-  - 'start', 'submit' and population buttons are all responsive to mouse clicks;
+  - 'start', 'submit' and population buttons are all responsive to mouse clicks;   
     -'start' runs game and focuses cursor to input field,   
     -'population' provides user's answer to checkAnswer function,   
     -'submit' shows alert, tallies score, re-runs game and focuses cursor to input field.   
