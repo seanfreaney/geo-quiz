@@ -31,12 +31,11 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 
 ### Interactive User Interface
 - __Button Colours__ 
-  - 'start', 'submit' and population buttons change colour on hover.
-  <br>
+  - 'start',  and population buttons change colour on hover.
   ![Start button on hover](assets/images/start-button.png)
-  <br> 
+  - 'population' buttons change colour on hover.
   ![Population button on hover](assets/images/population-button.png)
-  <br> 
+  - 'submit' button changes colour on hover.
   ![Submit button on hover](assets/images/submit-button.png)
 
 - __Mouse Clicks & Keyboard Input__
@@ -88,7 +87,7 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
 
 - __Automatically updating data__
 
- - I would like to figure out how I could add more values to the countries array and have them update automatically. This would be really cool to keep the population data up to date with the most recent census but also include things like 'current president' etc.
+  - I would like to figure out how I could add more values to the countries array and have them update automatically. This would be really cool to keep the population data up to date with the most recent census but also include things like 'current president' etc.
   
 ## Testing
 
@@ -156,8 +155,8 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   - W3 Schools - <https://www.w3schools.com/jsref/jsref_find.asp>
 
 - __Arrow Functions__
- - this logic was used in the correctAnswer and checkAnswer functions.
- - Bro Code Arrow Functions javascript tutorial - <https://www.youtube.com/watch?v=fRRRkognpOs>
+  - this logic was used in the correctAnswer and checkAnswer functions.
+  - Bro Code Arrow Functions javascript tutorial - <https://www.youtube.com/watch?v=fRRRkognpOs>
 
 - __join()__
   - this logic was used in displaying the user an alert related to their language answer to show and combine the languages array from the language key.
@@ -188,8 +187,8 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   - Flexiple - <https://flexiple.com/javascript/parsefloat-javascript>
 
 - __Ternary operators__
- - used in message alert in checkAnswer function.
- - Beau teaches Javascript <https://www.youtube.com/watch?v=s4sB1hm73tw>
+  - used in message alert in checkAnswer function.
+  - Beau teaches Javascript <https://www.youtube.com/watch?v=s4sB1hm73tw>
 
 ### Icons8
 - __Icon__
