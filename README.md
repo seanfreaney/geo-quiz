@@ -1,6 +1,6 @@
 # Geo Quiz
 
-Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge of capital cities, languages and populations of numerous countries. On clicking the 'start' button, a country is randomly generated and the user must asnwer with the country's capital city, language(s) and select the correct population. Ultimately, I would like to expand the list of countries included and enhance the interactivity of the site.
+Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge of capital cities, languages and populations of numerous countries. A country is randomly generated and the user must asnwer with the country's capital city, language(s) and select the correct population. I would like to expand the list of countries included and enhance the interactivity of the site.
 
 ## Game Logic
 - Countires array lists numerous objects. These objects have key-value pairs representing different attributes of the object;
@@ -63,7 +63,7 @@ Geo Quiz is an interactive geography quiz. Geo quiz tests the user's knowledge o
   - The code validates user-provided answers by comparing them with the correct answers stored in the countries array.
   - It provides feedback to users, indicating whether their answers are correct or incorrect.
 ![User alert on submission of answer](assets/images/user-alert.png)
-  - All answers must be complete by the user to all for submission.
+  - All answers must be complete by the user to allow for submission.
 ![User alert if question not fully answered](assets/images/submit-no-ans-new.png)
 
 ### Score Tracking 
